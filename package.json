@@ -1,0 +1,23 @@
+{
+  "name": "atulya-hospitality",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "zip": "powershell -ExecutionPolicy Bypass -File make_zip.ps1",
+    "build:zip": "vite build && powershell -ExecutionPolicy Bypass -File make_zip.ps1",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "^0.378.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "vite": "^5.2.11"
+  }
+}

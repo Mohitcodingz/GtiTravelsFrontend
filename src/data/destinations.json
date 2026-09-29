@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "jim-corbett",
+    "name": "Jim Corbett National Park",
+    "shortName": "Jim Corbett",
+    "state": "Uttarakhand",
+    "tagline": "India's Premier Tiger Reserve & Wild Wilderness",
+    "image": "/images/jim-corbett-atulya.jpg",
+    "description": "Famed for its majestic Bengal tigers, dense sal forests, and tranquil rivers, Jim Corbett is India's oldest national park and an unmatched nature sanctuary.",
+    "bestTime": "October to June",
+    "highlights": [
+      "Jeep & Canter Safaris",
+      "Dhikala & Bijrani Forest Zones",
+      "Kosi River Walks",
+      "Bird Watching & Nature Treks"
+    ]
+  },
+  {
+    "slug": "ranthambore",
+    "name": "Ranthambore National Park",
+    "shortName": "Ranthambore",
+    "state": "Rajasthan",
+    "tagline": "Royal Tigers Amidst Ancient Forts & Ruins",
+    "image": "/images/ranthambore-atulya.jpg",
+    "description": "A legendary wildlife haven where royal Bengal tigers roam freely among the historic ruins of the 10th-century Ranthambore Fort and serene lakes.",
+    "bestTime": "October to April",
+    "highlights": [
+      "Zone 1-10 Tiger Safaris",
+      "UNESCO Ranthambore Fort",
+      "Padam Talao & Rajbagh Lake",
+      "Royal Heritage Palaces"
+    ]
+  },
+  {
+    "slug": "nainital",
+    "name": "Nainital",
+    "shortName": "Nainital",
+    "state": "Uttarakhand",
+    "tagline": "The Enchanting City of Lakes in the Kumaon Hills",
+    "image": "/images/nainital-atulya.jpg",
+    "description": "Set in a steep valley around the eye-shaped Naini Lake, Nainital is one of India's most cherished hill stations with colonial charm and panoramic mountain views.",
+    "bestTime": "Throughout the year",
+    "highlights": [
+      "Boating on Naini Lake",
+      "Snow View Point & Ropeway",
+      "Mall Road Promenade",
+      "Naina Devi Temple"
+    ]
+  },
+  {
+    "slug": "bhimtal",
+    "name": "Bhimtal",
+    "shortName": "Bhimtal",
+    "state": "Uttarakhand",
+    "tagline": "Peaceful Mountain Lakes & Island Sanctuaries",
+    "image": "/images/fba300e0-8988-4170-9e14-3e06ef193c12-2-1.webp",
+    "description": "Larger and calmer than Nainital, Bhimtal features a picturesque lake with an island aquarium in the center, surrounded by pine forests and scenic walking trails.",
+    "bestTime": "March to June & September to December",
+    "highlights": [
+      "Bhimtal Lake & Island Aquarium",
+      "Kayaking & Boating",
+      "Victoria Dam",
+      "Hidimba Parvat"
+    ]
+  },
+  {
+    "slug": "mukteshwar",
+    "name": "Mukteshwar",
+    "shortName": "Mukteshwar",
+    "state": "Uttarakhand",
+    "tagline": "Unobstructed Himalayan Vistas & Quiet Orchards",
+    "image": "/images/Mukteshwar.webp",
+    "description": "Perched high in the Kumaon hills, Mukteshwar offers 180-degree views of the snow-capped Himalayan peaks, fruit orchards, and colonial heritage tranquility.",
+    "bestTime": "March to June & October to February",
+    "highlights": [
+      "Chauli Ki Jali Cliffs",
+      "350-Year Old Mukteshwar Dham",
+      "Himalayan Sunrise Views",
+      "Fruit Orchards & Forest Walks"
+    ]
+  }
+]

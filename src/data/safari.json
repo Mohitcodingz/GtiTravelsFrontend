@@ -1,0 +1,78 @@
+{
+  "title": "Jim Corbett Safari Booking",
+  "subtitle": "Official Jungle Jeep & Canter Safari Reservations",
+  "tagline": "Book Authorized Jim Corbett Safari with Expert Naturalist Drivers",
+  "price": "₹8,000",
+  "rateNum": 8000,
+  "timing": {
+    "morning": "06:00 AM – 09:30 AM",
+    "afternoon": "02:30 PM – 06:00 PM"
+  },
+  "capacity": "Up to 6 Persons + 2 Children (below 5 years) per Jeep",
+  "zones": [
+    {
+      "name": "Bijrani Zone",
+      "gate": "Amdanda Gate (1 km from Ramnagar)",
+      "desc": "Known for rich wildlife diversity, wide grasslands (chaurs), and frequent tiger sightings.",
+      "status": "Open Oct 15 – June 30",
+      "type": "Day Jeep Safari"
+    },
+    {
+      "name": "Dhikala Zone",
+      "gate": "Dhangarhi Gate (18 km from Ramnagar)",
+      "desc": "The largest and most famed zone with stunning panoramic views of the Patli Dun valley and Ramganga river.",
+      "status": "Open Nov 15 – June 15",
+      "type": "Canter & Night Stay Safari"
+    },
+    {
+      "name": "Jhirna Zone",
+      "gate": "Dhela Gate (20 km from Ramnagar)",
+      "desc": "Open throughout the year, featuring dry deciduous forest and dense bamboo thickets favored by sloth bears and tigers.",
+      "status": "Open All Year",
+      "type": "Day Jeep Safari"
+    },
+    {
+      "name": "Dhela Zone",
+      "gate": "Dhela Gate (20 km from Ramnagar)",
+      "desc": "An ecological buffer zone with mixed forest, rich birdlife, and grassland trails.",
+      "status": "Open All Year",
+      "type": "Day Jeep Safari"
+    },
+    {
+      "name": "Garjiya Zone",
+      "gate": "Garjiya Gate (9 km from Ramnagar)",
+      "desc": "High tiger density landscape with scenic ridge trails along the Kosi river basin.",
+      "status": "Open Oct 15 – June 30",
+      "type": "Day Jeep Safari"
+    },
+    {
+      "name": "Phato Zone",
+      "gate": "Phato Gate (26 km from Ramnagar)",
+      "desc": "A thriving eco-tourism zone known for elephants, leopards, and tiger trail crossings.",
+      "status": "Open All Year",
+      "type": "Day Jeep Safari"
+    }
+  ],
+  "pricingTable": [
+    {
+      "type": "Jeep Safari (Indian Citizens)",
+      "price": "₹8,000",
+      "detail": "Includes Jeep, Driver, Permit, Guide & Forest Taxes (Max 6 Adults)"
+    },
+    {
+      "type": "Jeep Safari (Foreigners)",
+      "price": "₹14,500",
+      "detail": "Includes Jeep, Driver, Foreigner Permit & Guide (Max 6 Persons)"
+    },
+    {
+      "type": "Canter Safari (Dhikala Zone)",
+      "price": "₹2,500 per seat",
+      "detail": "16-seater open safari canter with forest guide"
+    }
+  ],
+  "guidelines": [
+    "Safari permits are non-transferable and non-refundable under Forest Department guidelines.",
+    "Original Photo ID (Aadhaar / Passport / Voter ID) used during booking must be carried during entry.",
+    "Bookings open 45 days in advance for Indian citizens and 90 days for foreign nationals."
+  ]
+}

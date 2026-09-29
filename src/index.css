@@ -1,0 +1,301 @@
+ @import './assets/tokens.css';
+@import './assets/theme.css';
+
+/* Universal resets & typography defaults matching Atulya Hospitality */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-family: var(--atl-font-body);
+  color: var(--atl-ink-900);
+  background-color: #ebe0c8;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--atl-font-body);
+  color: var(--atl-ink-900);
+  background-color: #ebe0c8;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+#root, .atl-page-wrap {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--atl-font-display);
+  color: var(--atl-ink-900);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Custom utility overrides */
+.atl-container {
+  max-width: var(--atl-max-page);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1024px) {
+  .atl-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* ==========================================================================
+   Header & Dropdown Responsive Rules
+   ========================================================================== */
+.atl-nav-dropdown-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 250px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(208, 197, 175, 0.4);
+  padding: 8px;
+  z-index: 1000;
+  display: none;
+}
+
+.atl-nav-dropdown:hover .atl-nav-dropdown-panel,
+.atl-nav-dropdown.is-open .atl-nav-dropdown-panel {
+  display: block;
+}
+
+.atl-nav-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: background-color 0.15s ease;
+  text-decoration: none;
+}
+
+.atl-nav-dropdown-item:hover {
+  background: var(--atl-cream);
+}
+
+.atl-nav-dropdown-item-title {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--atl-ink-900);
+}
+
+.atl-nav-dropdown-item-desc {
+  font-size: 11px;
+  color: var(--atl-ink-500);
+  margin-top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .atl-nav-links {
+    display: none !important;
+  }
+  .atl-nav-hamburger {
+    display: inline-flex !important;
+  }
+  .atl-nav-cta {
+    display: none !important;
+  }
+}
+
+.atl-nav-mobile-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(208, 197, 175, 0.35);
+  padding: 16px;
+  display: none !important;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.atl-nav-mobile-panel.is-open {
+  display: flex !important;
+  animation: atl-fade-in-up 0.2s ease forwards;
+}
+
+@media (min-width: 1025px) {
+  .atl-nav-hamburger {
+    display: none !important;
+  }
+  .atl-nav-mobile-panel {
+    display: none !important;
+  }
+}
+
+/* Mobile Navbar & Hero Spacing Adjustments */
+@media (max-width: 768px) {
+  .atl-navbar {
+    padding: 8px 12px 8px 16px !important;
+  }
+  .atl-navbar-logo img {
+    height: 44px !important;
+    width: auto !important;
+  }
+  .atl-hero-wrap {
+    padding: 8px 8px 0 !important;
+  }
+  .atl-hero-card {
+    background: #f8f4ea !important;
+    padding: 14px 14px 28px !important;
+    border-radius: 20px !important;
+  }
+  .atl-hero-card .atl-container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .atl-full-bleed {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Hotel Detail Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 900px) {
+  .atl-hotel-gallery-grid {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 240px 140px !important;
+  }
+  .atl-hotel-gallery-grid > div:first-child {
+    grid-column: span 2 !important;
+    grid-row: span 1 !important;
+  }
+  .atl-hotel-content-layout {
+    grid-template-columns: 1fr !important;
+  }
+  .atl-room-card {
+    grid-template-columns: 1fr !important;
+    text-align: left;
+  }
+  .atl-room-card > div:first-child {
+    height: 180px !important;
+    width: 100% !important;
+  }
+  .atl-room-card > div:last-child {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .atl-hotel-gallery-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  .atl-hotel-gallery-grid > div:first-child {
+    grid-column: span 1 !important;
+    height: 240px !important;
+  }
+  .atl-hotel-gallery-grid > div:not(:first-child) {
+    display: none !important;
+  }
+  .atl-hotel-card-body {
+    padding: 20px 16px !important;
+  }
+  .atl-footer-cta-actions {
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+  }
+  .atl-footer-cta-copy {
+    padding: 28px 18px !important;
+  }
+  .atl-itinerary-body {
+    padding: 22px 16px !important;
+  }
+  .atl-itinerary-watermark {
+    font-size: 46px !important;
+    right: 16px !important;
+    top: 12px !important;
+    opacity: 0.25 !important;
+  }
+  .atl-contact-form-card,
+  .atl-contact-info-card {
+    padding: 24px 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .atl-dest-overview-grid,
+  .atl-safari-layout,
+  .atl-tour-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .atl-safari-page {
+    display: flex;
+    flex-direction: column;
+  }
+  .atl-safari-page > .atl-hero-wrap {
+    order: 0;
+  }
+  .atl-safari-page > .atl-container {
+    display: contents;
+  }
+  .atl-safari-page .atl-safari-layout {
+    display: contents !important;
+  }
+  .atl-safari-reservation {
+    order: 1;
+    padding: 24px 20px 0;
+  }
+  .atl-safari-reservation .atl-date-picker-popover {
+    right: 0;
+    left: auto;
+  }
+  .atl-safari-context {
+    order: 2;
+    padding: 24px 20px 80px;
+  }
+  .atl-safari-page > .atl-footer {
+    order: 3;
+  }
+}

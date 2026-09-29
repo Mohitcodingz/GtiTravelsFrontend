@@ -1,0 +1,256 @@
+[
+  {
+    "slug": "corbett-nainital",
+    "title": "Corbett Nainital",
+    "duration": "03 Nights & 04 Days",
+    "destination": "Jim Corbett",
+    "destinationSlug": "jim-corbett",
+    "price": "₹5,999",
+    "priceUnit": "/person",
+    "image": "/images/jim-corbett-atulya.jpg",
+    "description": [
+      "Experience the best of Uttarakhand with a memorable journey through the wild forests of Jim Corbett and the serene lakes and hills of Nainital. Explore the thrill of a jungle safari, discover scenic landscapes, enjoy peaceful lakeside moments, and soak in the charm of the Himalayas.",
+      "This tour beautifully combines wildlife, nature, adventure, and relaxation, making it ideal for families, couples, and nature lovers. From spotting wildlife in Corbett to enjoying the picturesque surroundings of Nainital, every day offers something new to discover.",
+      "Connect with us for detailed itinerary, package options, and customized travel plans."
+    ],
+    "packageIncludes": [
+      {
+        "num": "01",
+        "title": "Hotel",
+        "text": "Today wake up & get ready for your journey, have Breakfast in Resort. Then Check out and back to your place with the memories of Jim Corbett."
+      },
+      {
+        "num": "02",
+        "title": "Breakfast + Dinner",
+        "text": "Today wake up & get ready for your journey, have Breakfast in Resort. Then Check out and back to your place with the memories of Jim Corbett."
+      },
+      {
+        "num": "03",
+        "title": "Transport",
+        "text": "Today wake up & get ready for your journey, have Breakfast in Resort. Then Check out and back to your place with the memories of Jim Corbett."
+      }
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "kicker": "Day 1 of 3",
+        "watermark": "01",
+        "title": "Origin Place – Jim Corbett",
+        "image": "/images/The-Chamomile-Estate-Lavender-Room-3_processed_by_imagy.webp",
+        "text": "Start your Journey at Suitable Time from Delhi or your origin place. Have Breakfast En route as you will get lots of options in Gajraula. Reach & Check inn , in your Pre-Booked Resort in Jim Corbett National Park. Have Lunch & Merge yourself with the in-House Games & Recreational activities of Resort. Have Dinner & Overnight Stay."
+      },
+      {
+        "day": "Day 2",
+        "kicker": "Day 2 of 3",
+        "watermark": "02",
+        "title": "Explore the Jim Corbett National Park",
+        "image": "/images/The-Chamomile-Estate-Creche-1_processed_by_imagy.webp",
+        "text": "Today get to connect with Nature early in the morning by 03 Hrs ride in Gypsy. Apart from wildlife, you will get a chance to see the beauty of Nature. Back to Resort & have breakfast. After lunch, You can go to the local sightseeing places like Garjiya Devi Temple, Kosi River, Dhangari Museum, etc. Back to Resort, have dinner & Overnight stay."
+      },
+      {
+        "day": "Day 3",
+        "kicker": "Day 3 of 3",
+        "watermark": "03",
+        "title": "Explore the Dhikala",
+        "image": "/images/home_hero_image_3.webp",
+        "text": "Today wake up with excitement of seeing the heart of Corbett named Dhikala. Have Breakfast & get ready for the adventure. Reach the gate by 11-11:30 Am & Board the Cantor & Enter the Dhikala Zone. Have Lunch in the Canteen of Dhikala FRH (by your own), spend sometime exploring the zone & then cantor will drop you back to the gate after 06 Hrs. Back to Resort, have dinner & Overnight stay"
+      }
+    ],
+    "inclusions": [
+      "Welcome Drinks on Arrival (Non-Alcoholic)",
+      "Accommodation in well-appointed rooms",
+      "03 Time Buffet Breakfast",
+      "02 Time Buffet Lunch",
+      "03 Time Buffet Dinner",
+      "01 Time Jungle Safari in Jim Corbett National Park",
+      "01 Time Cantor Safari in Dhikala Zone",
+      "Tea in both evenings",
+      "Tea/Coffee maker in the room",
+      "Common Bonfire in the evening (In Winters & Depends on weather condition)",
+      "Evening Entertainment Programme (in some resorts)",
+      "Use of Indoor & Outdoor activities available at the resort",
+      "Access to the River (On Walking Distance from some resorts)",
+      "Use of Swimming Pool (with Costume only)"
+    ],
+    "exclusions": [
+      "Any Airfare / Transport Charges",
+      "Laundry Expenses, Phone bills, Personal Expenses",
+      "Anything which is not mentioned in inclusions",
+      "ANY INSURANCE"
+    ],
+    "otherInfo": [
+      "Weather – For detailed Information about weather kindly visit www.accuweather.com",
+      "Documents Required for Travel",
+      "ADULT: Voters ID / Passport / Aadhar Card / Driving Licence",
+      "CHILD : Passport / Aadhar Card / School ID",
+      "INFANT: Aadhar Card/ Birth certificate"
+    ],
+    "disclaimer": "Disclaimer – Atulya Hospitality have some Handling Charges in the Package which is including in the Net Cost of Package."
+  },
+  {
+    "slug": "corbett-wildlife-safari",
+    "title": "Corbett Wildlife Safari",
+    "duration": "02 Nights & 03 Days",
+    "destination": "Jim Corbett",
+    "destinationSlug": "jim-corbett",
+    "price": "₹4,499",
+    "priceUnit": "/person",
+    "image": "/images/ranthambore-atulya.jpg",
+    "description": [
+      "Immerse yourself in the dense sal forests and pristine grasslands of Jim Corbett National Park with our signature wildlife safari tour package. Designed specifically for nature enthusiasts, birdwatchers, and adventure seekers.",
+      "Experience thrilling morning and evening open Gypsy safaris into the celebrated Bijrani or Jhirna zones, accompanied by certified naturalists who track tigers, Asian elephants, leopards, and over 600 species of resident birds.",
+      "Relax in a luxury riverside resort by the Kosi River with delicious buffet dining, evening bonfires, and seamless concierge support from Atulya Hospitality."
+    ],
+    "packageIncludes": [
+      {
+        "num": "01",
+        "title": "Riverside Resort",
+        "text": "Luxury forest-side or riverside stay with modern amenities, swimming pool, and pristine natural surroundings."
+      },
+      {
+        "num": "02",
+        "title": "All Meals Included",
+        "text": "Daily lavish breakfast and buffet dinners featuring authentic Kumaoni dishes and multi-cuisine favorites."
+      },
+      {
+        "num": "03",
+        "title": "Open Jeep Safari",
+        "text": "Authorized 4x4 open Gypsy safaris with experienced wildlife guide, park permits, and entry fees covered."
+      }
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "kicker": "Day 1 of 3",
+        "watermark": "01",
+        "title": "Arrival in Jim Corbett & Riverside Relaxation",
+        "image": "/images/Clarissa-2.webp",
+        "text": "Arrive at your pre-booked resort in Corbett. Check-in, enjoy refreshing welcome drinks, and unwind amidst tranquil forest landscapes. Spend your afternoon strolling along the Kosi riverbed or participating in resort recreational games. Evening dinner & overnight stay."
+      },
+      {
+        "day": "Day 2",
+        "kicker": "Day 2 of 3",
+        "watermark": "02",
+        "title": "Morning Jeep Safari & Local Corbett Sights",
+        "image": "/images/home_hero_image_3.webp",
+        "text": "Early morning pickup by open 4x4 Gypsy for an exhilarating jungle safari in Corbett Tiger Reserve. Spot wildlife in their natural habitat. Return to the resort for hot breakfast. Afternoon visit to Garjiya Devi Temple and Corbett Museum. Evening bonfire and dinner."
+      },
+      {
+        "day": "Day 3",
+        "kicker": "Day 3 of 3",
+        "watermark": "03",
+        "title": "Morning Nature Walk & Departure",
+        "image": "/images/Tiaraa-2.webp",
+        "text": "Wake up to bird melodies and take a refreshing morning walk through the surrounding orchards. Relish breakfast in the resort restaurant. Check-out and head homeward with timeless Corbett memories."
+      }
+    ],
+    "inclusions": [
+      "Welcome Drinks on Arrival (Non-Alcoholic)",
+      "02 Nights Accommodation in Premium Resort",
+      "Daily Buffet Breakfast and Dinner",
+      "01 Open Jeep Safari with forest permits & guide",
+      "Complimentary use of swimming pool & indoor games",
+      "Evening bonfire (seasonal & weather permitting)",
+      "Guided riverside walking tour",
+      "All applicable hotel taxes"
+    ],
+    "exclusions": [
+      "Personal expenses such as laundry, phone calls, drinks",
+      "Extra meals or room service orders not specified",
+      "Camera fees or optional adventure activities",
+      "Travel insurance & transfers to/from Corbett"
+    ],
+    "otherInfo": [
+      "Government-issued photo ID required for all guests for safari permit validation",
+      "Safari bookings are subject to availability and forest department regulations",
+      "Winter mornings can be cold; carry warm windproof jackets for open jeep rides"
+    ],
+    "disclaimer": "Disclaimer – Atulya Hospitality have some Handling Charges in the Package which is including in the Net Cost of Package."
+  },
+  {
+    "slug": "nainital-lake-retreat",
+    "title": "Nainital Lake Retreat",
+    "duration": "03 Nights & 04 Days",
+    "destination": "Nainital",
+    "destinationSlug": "nainital",
+    "price": "₹6,499",
+    "priceUnit": "/person",
+    "image": "/images/nainital-atulya.jpg",
+    "description": [
+      "Escape to the serene hills of Kumaon with our scenic Nainital and Bhimtal lake retreat package. Breathtaking vistas of snow-capped Himalayan peaks, emerald waters, and pine-scented mountain air await you.",
+      "Explore the charms of Naini Lake with sunset boating, walk the heritage colonial pathways of the Mall Road, ride the aerial ropeway to Snow View Point, and visit the tranquil seven lakes of Sattal.",
+      "Stay in boutique hill-view properties with attentive hospitality, authentic local delicacies, and private vehicle sightseeing included throughout."
+    ],
+    "packageIncludes": [
+      {
+        "num": "01",
+        "title": "Hill View Hotel",
+        "text": "Boutique lake-facing or mountain-view property with comfortable heated rooms and panoramic valley vistas."
+      },
+      {
+        "num": "02",
+        "title": "Daily Breakfast & Dinner",
+        "text": "Wholesome morning breakfast and evening multi-cuisine dining prepared with fresh mountain produce."
+      },
+      {
+        "num": "03",
+        "title": "Sightseeing Transfers",
+        "text": "Private car for local Nainital and Bhimtal lake excursions, viewpoints, and temples."
+      }
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "kicker": "Day 1 of 4",
+        "watermark": "01",
+        "title": "Arrival in Nainital & Evening at Naini Lake",
+        "image": "/images/nainital-atulya.jpg",
+        "text": "Drive up the scenic Kumaon hills to Nainital. Check-in at your hotel and relax. In the evening, head down to the famous Naini Lake for a peaceful shikara boating experience during sunset, followed by a casual walk along Mall Road. Dinner & overnight stay."
+      },
+      {
+        "day": "Day 2",
+        "kicker": "Day 2 of 4",
+        "watermark": "02",
+        "title": "Himalayan Viewpoints & Cable Car Ride",
+        "image": "/images/The-Chamomile-Estate-Lavender-Room-3_processed_by_imagy.webp",
+        "text": "After a hearty breakfast, take the ropeway cable car up to Snow View Point for majestic views of Nanda Devi and Trishul peaks. Visit Lovers Point, Cave Garden, and the sacred Naina Devi Temple. Enjoy evening shopping at the Tibetan Market."
+      },
+      {
+        "day": "Day 3",
+        "kicker": "Day 3 of 4",
+        "watermark": "03",
+        "title": "Bhimtal, Sattal & Naukuchiatal Lakes Excursion",
+        "image": "/images/fba300e0-8988-4170-9e14-3e06ef193c12-2-1.webp",
+        "text": "Full day tour exploring the famous lake district: the picturesque island temple at Bhimtal Lake, the pristine birding forests of Sattal, and Naukuchiatal lake. Return to Nainital for a special evening dinner."
+      },
+      {
+        "day": "Day 4",
+        "kicker": "Day 4 of 4",
+        "watermark": "04",
+        "title": "Corbett Waterfalls & Departure",
+        "image": "/images/Golden-Waterhole-Villa.webp",
+        "text": "Enjoy breakfast overlooking the green hills. Check-out and take a scenic stop at Corbett Falls en route to Kathgodam railway station or Delhi. Return home refreshed and rejuvenated."
+      }
+    ],
+    "inclusions": [
+      "03 Nights Accommodation in Scenic Mountain Hotel",
+      "Welcome Drink on Arrival",
+      "Daily Buffet Breakfast and Dinner",
+      "Boating at Naini Lake",
+      "Full Day Sightseeing of Bhimtal, Sattal & Naukuchiatal",
+      "Pick-up and drop assistance as per itinerary",
+      "All driver allowances, toll taxes, and parking fees"
+    ],
+    "exclusions": [
+      "Airfare or train tickets",
+      "Entry tickets to monuments, museums, or cable car",
+      "Personal expenses such as laundry, beverages, tips",
+      "Any adventure sports activities (kayaking, paragliding)"
+    ],
+    "otherInfo": [
+      "Carry woolens as hill weather can become chilly in evenings",
+      "Valid Government Photo ID required during hotel check-in"
+    ],
+    "disclaimer": "Disclaimer – Atulya Hospitality have some Handling Charges in the Package which is including in the Net Cost of Package."
+  }
+]

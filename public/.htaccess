@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1. Fix nested asset & image requests from deep-linked SPA routes (e.g. /dist/hotels/assets/... -> /dist/assets/...)
+  RewriteRule ^.+/assets/(.*)$ assets/$1 [L]
+  RewriteRule ^.+/images/(.*)$ images/$1 [L]
+
+  # 2. Existing files and directories serve normally
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . index.html [L]
+</IfModule>

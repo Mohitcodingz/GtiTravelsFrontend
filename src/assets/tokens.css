@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Atulya Hospitality — design tokens
+   Mirrors project/tailwind.config.js from the Claude Design prototype so the
+   theme's visual output matches the approved .dc.html designs exactly.
+   ========================================================================== */
+
+:root {
+  /* Colors - Single Unified Darker Theme Color: #3a2b14 */
+  --atl-ink-900: #3a2b14;
+  --atl-ink-700: #3a2b14;
+  --atl-ink-500: #3a2b14;
+
+  --atl-primary: #3a2b14;       
+  --atl-primary-dark: #261c0c;  
+  --atl-primary-light: #523f20;
+
+  --atl-gold: #3a2b14;
+  --atl-gold-deep: #261c0c;
+  --atl-gold-light: #523f20;
+  --atl-gold-dim: #3a2b14;
+
+  --atl-cream: #fbf9f4; 
+  --atl-cream-pill: #f8f4ea;
+  --atl-cream-100: #f8f4ea;
+
+  --atl-surface: #ffffff;
+  --atl-surface-low: #ffffff;
+
+  --atl-outline: rgba(58, 43, 20, 0.25);
+  --atl-green: #3a2b14;
+  --atl-whatsapp: #25d366;
+  --atl-danger: #b3441e;
+
+  --atl-white: #ffffff;
+
+  /* Typography */
+  --atl-font-display: 'Playfair Display', serif;
+  --atl-font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Radii */
+  --atl-radius-lg: 16px;
+  --atl-radius-xl: 20px;
+  --atl-radius-xl2: 20px;
+  --atl-radius-xl3: 24px;
+  --atl-radius-xl4: 32px;
+  --atl-radius-full: 9999px;
+
+  /* Layout */
+  --atl-max-page: 1280px;
+  --atl-max-content: 1180px;
+
+  /* Shadows */
+  --atl-shadow-card: 0 10px 30px rgba(0, 0, 0, .04);
+  --atl-shadow-pill: 0 4px 16px rgba(0, 0, 0, .05);
+  --atl-shadow-float: 0 20px 50px rgba(0, 0, 0, .06);
+  --atl-shadow-menu: 0 20px 50px rgba(0, 0, 0, .15);
+
+  /* Motion */
+  --atl-duration-base: 200ms;
+}
