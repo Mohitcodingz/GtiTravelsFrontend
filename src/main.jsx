@@ -12,16 +12,24 @@ function ScrollToTop() {
   return null;
 }
 
-// Universal Subdirectory & Asset Resolver for images and routing
+// Supports Vercel (served at /) and cPanel (uploaded dist contents to domain root,
+// or uploaded dist folder as /dist/). Auto-detects the subdirectory from built asset URLs.
 let appBase = '';
 try {
-  const metaBase = new URL(/* @vite-ignore */ '../', import.meta.url).pathname;
-  appBase = metaBase.replace(/\/+$/, '') || '';
+  const scripts = document.querySelectorAll('script[src]');
+  for (const s of scripts) {
+    const src = s.getAttribute('src') || '';
+    if (src.includes('/assets/')) {
+      // e.g. "/dist/assets/index-abc.js" -> "/dist", "/assets/index-abc.js" -> ""
+      appBase = src.substring(0, src.indexOf('/assets/')).replace(/\/+$/, '') || '';
+      break;
+    }
+  }
 } catch (e) {
-  appBase = window.location.pathname.startsWith('/dist') ? '/dist' : '';
+  appBase = '';
 }
 
-// Ensure detection works when visited via /dist or /dist/
+// Fallback: detect when visited via /dist or /dist/
 if (!appBase && (window.location.pathname === '/dist' || window.location.pathname.startsWith('/dist/'))) {
   appBase = '/dist';
 }
