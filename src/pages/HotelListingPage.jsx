@@ -4,10 +4,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HotelCard from '../components/HotelCard';
 import FilterBar from '../components/FilterBar';
-import useHotelCatalog from '../hooks/useHotelCatalog';
+import hotelsData from '../data/hotels.json';
 
 export default function HotelListingPage({ destinationName, title, subtitle, isRiverside }) {
-  const hotelsData = useHotelCatalog();
   const [selectedRating, setSelectedRating] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -24,7 +23,7 @@ export default function HotelListingPage({ destinationName, title, subtitle, isR
       const matchSearch =
         searchQuery === '' ||
         h.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (h.overview || '').toLowerCase().includes(searchQuery.toLowerCase());
+        h.overview.toLowerCase().includes(searchQuery.toLowerCase());
 
       return matchDest && matchRating && matchSearch;
     });

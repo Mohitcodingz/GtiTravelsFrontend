@@ -10,8 +10,8 @@
     "location": "Jhirna Road, Jim Corbett",
     "reviewScore": "4.5",
     "reviewCount": "1,910 reviews",
-    "startingPrice": "₹0",
-    "rateNum": 0,
+    "startingPrice": "₹1",
+    "rateNum": 1,
     "heroImage": "/images/Aahana-3.webp",
     "gallery": [
       "/images/Aahana-3.webp",
@@ -139,14 +139,14 @@
     ],
     "faqs": [],
     "mealPlanRates": {
-      "CP": 0,
+      "CP": 1,
       "MAP": 18719,
       "AP": 22229
     }
   },
   {
     "slug": "aamaghati-wildlife-resort",
-    "title": "Aamaghati Wildlife Resort",
+    "title": "Aamaghati Wildlife Resort10",
     "destination": "Ranthambore",
     "destinationSlug": "ranthambore",
     "rating": "5-star",
@@ -155,8 +155,8 @@
     "location": "Sherpur Road, Ranthambore",
     "reviewScore": "4.5",
     "reviewCount": "708 reviews",
-    "startingPrice": "₹0",
-    "rateNum": 0,
+    "startingPrice": "₹18,719",
+    "rateNum": 18719,
     "heroImage": "/images/Overview.webp",
     "gallery": [
       "/images/Overview.webp",
@@ -258,7 +258,12 @@
         "text": "Had a wonderful stay at Aamaghati Resort Ranthambore! The property is beautiful, peaceful, and very well maintained. The rooms were clean and comfortable, making our stay truly relaxing. A special mention to the staff—Yuviii, Mr. & Mrs. Ohii—for their kindness and friendly nature. Their warm hospitality really made our experience even more memorable. Highly recommended for anyone visiting Ranthambore! 🌿✨"
       }
     ],
-    "faqs": []
+    "faqs": [],
+    "mealPlanRates": {
+      "CP": 0,
+      "MAP": 18719,
+      "AP": 22229
+    }
   },
   {
     "slug": "abn-sarovar-portico",

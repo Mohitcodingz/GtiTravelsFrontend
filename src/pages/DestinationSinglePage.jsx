@@ -5,11 +5,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HotelCard from '../components/HotelCard';
 import destinationsData from '../data/destinations.json';
-import useHotelCatalog from '../hooks/useHotelCatalog';
+import hotelsData from '../data/hotels.json';
 
 export default function DestinationSinglePage() {
   const { slug } = useParams();
-  const hotelsData = useHotelCatalog();
   const destination = destinationsData.find((d) => d.slug === slug);
 
   if (!destination) {

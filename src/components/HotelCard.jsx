@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Star, ArrowRight, MessageCircle } from 'lucide-react';
-import { getStartingRate } from '../utils/mealPlans';
 
 export default function HotelCard({ hotel }) {
-  const startingRate = getStartingRate(hotel);
+  const formatPrice = (num) => {
+    return '₹' + num.toLocaleString('en-IN');
+  };
 
   return (
     <div
@@ -184,11 +185,9 @@ export default function HotelCard({ hotel }) {
                   fontFamily: 'Playfair Display, serif'
                 }}
               >
-                {startingRate > 0 ? `₹${startingRate.toLocaleString('en-IN')}` : 'Rates on request'}
+                {formatPrice(hotel.rateNum)}
               </span>
-              {startingRate > 0 && (
-                <span style={{ fontSize: '11px', color: 'var(--atl-ink-500)' }}>/night</span>
-              )}
+              <span style={{ fontSize: '11px', color: 'var(--atl-ink-500)' }}>/night</span>
             </div>
           </div>
 

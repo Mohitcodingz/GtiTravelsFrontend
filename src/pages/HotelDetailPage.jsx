@@ -41,33 +41,41 @@ export default function HotelDetailPage() {
 
   useEffect(() => {
     setHotel(fallbackHotel);
-    if (!import.meta.env.DEV || !slug) return undefined;
+    if (!slug) return undefined;
 
     let isCurrent = true;
-    fetch(`/api/hotels/${encodeURIComponent(slug)}`)
-      .then(async (response) => {
+    let timeoutId;
+
+    const refreshHotel = async () => {
+      try {
+        const response = await fetch(`/api/hotels/${encodeURIComponent(slug)}`, {
+          cache: 'no-store'
+        });
         if (!response.ok) {
           throw new Error(`Could not load hotel data (${response.status}).`);
         }
-        return response.json();
-      })
-      .then((data) => {
+        const data = await response.json();
         if (isCurrent) setHotel(data);
-      })
-      .catch((error) => {
-        console.error('Could not load local hotel data:', error);
-      });
+      } catch (error) {
+        console.error('Could not load hotel data:', error);
+      } finally {
+        if (isCurrent) {
+          timeoutId = window.setTimeout(refreshHotel, 10000);
+        }
+      }
+    };
+
+    refreshHotel();
 
     return () => {
       isCurrent = false;
+      window.clearTimeout(timeoutId);
     };
   }, [fallbackHotel, slug]);
 
   useEffect(() => {
-    if (hotel) {
-      setSelectedMealPlan(getDefaultMealPlan(getMealPlanRates(hotel)));
-    }
-  }, [hotel]);
+    if (hotel) setSelectedMealPlan(getDefaultMealPlan(mealPlanRates));
+  }, [hotel?.slug, mealPlanRates.CP, mealPlanRates.MAP, mealPlanRates.AP]);
 
   if (!hotel) {
     return <Navigate to="/hotels/" replace />;
@@ -523,32 +531,32 @@ export default function HotelDetailPage() {
                       const rate = mealPlanRates[item.code];
                       const isUnavailable = rate <= 0;
                       return (
-                      <button
-                        key={item.code}
-                        type="button"
-                        onClick={() => setSelectedMealPlan(item.code)}
-                        disabled={isUnavailable}
-                        aria-pressed={selectedMealPlan === item.code}
-                        style={{
-                          padding: '6px 2px',
-                          borderRadius: '8px',
-                          fontSize: '11.5px',
-                          fontWeight: 700,
-                          border: selectedMealPlan === item.code ? '1.5px solid #3a2b14' : '1px solid rgba(208, 197, 175, 0.6)',
-                          background: selectedMealPlan === item.code ? '#3a2b14' : '#ffffff',
-                          color: selectedMealPlan === item.code ? '#ffffff' : 'var(--atl-ink-800)',
-                          cursor: isUnavailable ? 'not-allowed' : 'pointer',
-                          opacity: isUnavailable ? 0.55 : 1,
-                          transition: 'all 0.2s ease',
-                          textAlign: 'center'
-                        }}
-                      >
-                        <div>{item.name}</div>
-                        <div style={{ fontSize: '9.5px', opacity: 0.8, fontWeight: 500 }}>{item.label}</div>
-                        <div style={{ fontSize: '10px', marginTop: '3px' }}>
-                          {rate > 0 ? `₹${rate.toLocaleString('en-IN')}` : 'Unavailable'}
-                        </div>
-                      </button>
+                        <button
+                          key={item.code}
+                          type="button"
+                          onClick={() => setSelectedMealPlan(item.code)}
+                          disabled={isUnavailable}
+                          aria-pressed={selectedMealPlan === item.code}
+                          style={{
+                            padding: '6px 2px',
+                            borderRadius: '8px',
+                            fontSize: '11.5px',
+                            fontWeight: 700,
+                            border: selectedMealPlan === item.code ? '1.5px solid #3a2b14' : '1px solid rgba(208, 197, 175, 0.6)',
+                            background: selectedMealPlan === item.code ? '#3a2b14' : '#ffffff',
+                            color: selectedMealPlan === item.code ? '#ffffff' : 'var(--atl-ink-800)',
+                            cursor: isUnavailable ? 'not-allowed' : 'pointer',
+                            opacity: isUnavailable ? 0.55 : 1,
+                            transition: 'all 0.2s ease',
+                            textAlign: 'center'
+                          }}
+                        >
+                          <div>{item.name}</div>
+                          <div style={{ fontSize: '9.5px', opacity: 0.8, fontWeight: 500 }}>{item.label}</div>
+                          <div style={{ fontSize: '10px', marginTop: '3px' }}>
+                            {rate > 0 ? `₹${rate.toLocaleString('en-IN')}` : 'Unavailable'}
+                          </div>
+                        </button>
                       );
                     })}
                   </div>

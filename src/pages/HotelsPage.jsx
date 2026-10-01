@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { Search, ArrowRight, Sparkles, MapPin } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import useHotelCatalog from '../hooks/useHotelCatalog';
-import { getStartingRate } from '../utils/mealPlans';
 
 
 const corbettResorts = [
@@ -286,7 +284,6 @@ const corbettResorts = [
 ];
 
 export default function HotelsPage() {
-  const hotelCatalog = useHotelCatalog();
   const [selectedRating, setSelectedRating] = useState('all');
   const [selectedPriceTier, setSelectedPriceTier] = useState('all');
   const [sortBy, setSortBy] = useState('recommended');
@@ -298,32 +295,8 @@ export default function HotelsPage() {
     return isNaN(num) ? 99999 : num;
   };
 
-  const resorts = useMemo(
-    () =>
-      corbettResorts.map((listing) => {
-        const hotel = hotelCatalog.find((item) => item.slug === listing.slug);
-        if (!hotel) return listing;
-
-        const startingRate = getStartingRate(hotel);
-        return {
-          ...listing,
-          title: hotel.title,
-          starRating: String(hotel.starCount || listing.starCount),
-          ratingLabel: hotel.ratingLabel || listing.ratingLabel,
-          starCount: hotel.starCount || listing.starCount,
-          price: startingRate
-            ? `₹${startingRate.toLocaleString('en-IN')}`
-            : 'Rates on request',
-          priceUnit: startingRate ? '/night' : '',
-          image: hotel.heroImage || listing.image,
-          description: hotel.overview || listing.description
-        };
-      }),
-    [hotelCatalog]
-  );
-
   const filteredResorts = useMemo(() => {
-    let list = resorts.filter((r) => {
+    let list = corbettResorts.filter((r) => {
       const matchesRating = selectedRating === 'all' || r.starRating === selectedRating;
       const numPrice = parsePrice(r.price);
       const matchesPrice = selectedPriceTier === 'all' ||
@@ -346,7 +319,7 @@ export default function HotelsPage() {
     }
 
     return list;
-  }, [resorts, selectedRating, selectedPriceTier, sortBy, searchQuery]);
+  }, [selectedRating, selectedPriceTier, sortBy, searchQuery]);
 
   return (
     <div className="atl-page-wrap">
@@ -405,7 +378,7 @@ export default function HotelsPage() {
                   onClick={() => setSelectedRating('all')}
                 >
                   <span>All</span>
-                  <span style={{ fontSize: '10.5px', opacity: 0.85 }}>({resorts.length})</span>
+                  <span style={{ fontSize: '10.5px', opacity: 0.85 }}>({corbettResorts.length})</span>
                 </button>
                 <button
                   type="button"

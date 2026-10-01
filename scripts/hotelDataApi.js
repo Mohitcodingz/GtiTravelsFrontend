@@ -1,9 +1,12 @@
-import { readFile, rename, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const hotelsFile = fileURLToPath(
   new URL('../src/data/hotels.json', import.meta.url)
+);
+const localHotelsFile = fileURLToPath(
+  new URL('../.hotel-data/hotels.json', import.meta.url)
 );
 const hotelRoute = /^\/api\/hotels\/([^/]+)$/;
 const maxRequestSize = 2 * 1024 * 1024;
@@ -15,7 +18,13 @@ function sendJson(response, status, data) {
 }
 
 async function readHotels() {
-  const contents = await readFile(hotelsFile, 'utf8');
+  let contents;
+  try {
+    contents = await readFile(localHotelsFile, 'utf8');
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+    contents = await readFile(hotelsFile, 'utf8');
+  }
   return JSON.parse(contents.replace(/^\uFEFF/, ''));
 }
 
@@ -131,8 +140,9 @@ async function handleHotelApi(request, response, next) {
     }
 
     hotels[hotelIndex] = updatedHotel;
+    await mkdir(path.dirname(localHotelsFile), { recursive: true });
     const temporaryFile = path.join(
-      path.dirname(hotelsFile),
+      path.dirname(localHotelsFile),
       `hotels.${process.pid}.${Date.now()}.tmp`
     );
     await writeFile(temporaryFile, `${JSON.stringify(hotels, null, 2)}\n`, 'utf8');
