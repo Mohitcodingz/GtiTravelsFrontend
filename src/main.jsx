@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, useLocation } from 'react-router-dom';
 import App from './App.jsx';
@@ -12,28 +12,36 @@ function ScrollToTop() {
   return null;
 }
 
-// Supports Vercel (served at /) and cPanel (uploaded dist contents to domain root,
-// or uploaded dist folder as /dist/). Auto-detects the subdirectory from built asset URLs.
+// Auto-detect subfolder the app is served from ('' at domain root, '/dist' if uploaded as subfolder, etc.)
+// Works with both absolute ('/assets/...') and relative ('./assets/...') Vite builds.
+// Uses script.src (browser-resolved absolute URL, correct even on deep SPA routes) instead of
+// the raw attribute (which resolves wrongly against the current deep URL).
 let appBase = '';
 try {
-  const scripts = document.querySelectorAll('script[src]');
+  const scripts = document.querySelectorAll('script[src*="assets/"]');
   for (const s of scripts) {
-    const src = s.getAttribute('src') || '';
-    if (src.includes('/assets/')) {
-      // e.g. "/dist/assets/index-abc.js" -> "/dist", "/assets/index-abc.js" -> ""
-      appBase = src.substring(0, src.indexOf('/assets/')).replace(/\/+$/, '') || '';
-      break;
-    }
+    try {
+      const abs = new URL(s.src, window.location.href);
+      const idx = abs.pathname.indexOf('/assets/');
+      if (idx !== -1) {
+        let prefix = abs.pathname.substring(0, idx).replace(/\/+$/, '');
+        if (prefix === '/') prefix = '';
+        appBase = prefix || '';
+        break;
+      }
+    } catch (e) { /* try next script */ }
   }
 } catch (e) {
   appBase = '';
 }
 
-// Fallback: detect when visited via /dist or /dist/
+// Fallback for direct visit to /dist before JS bundle name is known (keeps old behaviour)
 if (!appBase && (window.location.pathname === '/dist' || window.location.pathname.startsWith('/dist/'))) {
   appBase = '/dist';
 }
 
+// When served from a subfolder, rewrite absolute '/images/...' references so they stay inside the subfolder.
+// (No design/code change - purely a deploy-path fix.)
 if (appBase && typeof window !== 'undefined') {
   const patchUrl = (val) => {
     if (typeof val === 'string') {
@@ -48,7 +56,6 @@ if (appBase && typeof window !== 'undefined') {
     return val;
   };
 
-  // 1. Intercept HTMLImageElement.prototype.src
   const srcDescriptor = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
   if (srcDescriptor && srcDescriptor.set) {
     Object.defineProperty(HTMLImageElement.prototype, 'src', {
@@ -63,7 +70,6 @@ if (appBase && typeof window !== 'undefined') {
     });
   }
 
-  // 2. Intercept setAttribute for src
   const originalSetAttr = Element.prototype.setAttribute;
   Element.prototype.setAttribute = function (name, val) {
     if (typeof name === 'string' && name.toLowerCase() === 'src') {
@@ -72,7 +78,6 @@ if (appBase && typeof window !== 'undefined') {
     return originalSetAttr.call(this, name, val);
   };
 
-  // 3. Fallback capture-phase error listener for any missed image requests
   window.addEventListener(
     'error',
     (event) => {
@@ -90,10 +95,9 @@ if (appBase && typeof window !== 'undefined') {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={appBase || ''}>
+    <BrowserRouter basename={appBase || undefined}>
       <ScrollToTop />
       <App />
     </BrowserRouter>
   </React.StrictMode>
 );
-

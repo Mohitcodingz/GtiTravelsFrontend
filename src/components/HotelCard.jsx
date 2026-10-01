@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Star, ArrowRight, MessageCircle } from 'lucide-react';
+import { getStartingRate } from '../utils/mealPlans';
 
 export default function HotelCard({ hotel }) {
-  const formatPrice = (num) => {
-    return '₹' + num.toLocaleString('en-IN');
-  };
+  const startingRate = getStartingRate(hotel);
 
   return (
     <div
@@ -185,15 +184,17 @@ export default function HotelCard({ hotel }) {
                   fontFamily: 'Playfair Display, serif'
                 }}
               >
-                {formatPrice(hotel.rateNum)}
+                {startingRate > 0 ? `₹${startingRate.toLocaleString('en-IN')}` : 'Rates on request'}
               </span>
-              <span style={{ fontSize: '11px', color: 'var(--atl-ink-500)' }}>/night</span>
+              {startingRate > 0 && (
+                <span style={{ fontSize: '11px', color: 'var(--atl-ink-500)' }}>/night</span>
+              )}
             </div>
           </div>
 
           <div style={{ display: 'flex', gap: '8px' }}>
             <a
-              href={`https://wa.me/919315517530?text=Hello%20Atulya%20Hospitality,%20I%20am%20interested%20in%20booking%20${encodeURIComponent(hotel.title)}.`}
+              href={`https://wa.me/919717327225?text=Hello%20GTI%20Travels%20Pvt.%20Ltd.,%20I%20am%20interested%20in%20booking%20${encodeURIComponent(hotel.title)}.`}
               target="_blank"
               rel="noopener noreferrer"
               className="atl-btn atl-btn-whatsapp"

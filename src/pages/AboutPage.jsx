@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShieldCheck, Heart, Award, Users, CheckCircle2 } from 'lucide-react';
 import Header from '../components/Header';
@@ -30,7 +30,7 @@ export default function AboutPage() {
             <span className="atl-kicker-caps">Our Purpose &amp; Heritage</span>
             <h1 className="atl-page-title-heading" style={{ margin: '8px auto 12px' }}>Crafting Unforgettable Escapes Across Wilderness &amp; Lakes</h1>
             <p className="atl-page-title-text" style={{ margin: '0 auto', maxWidth: '640px' }}>
-              Atulya Hospitality is a premium travel company built on the simple philosophy that where you stay shapes the soul of your entire journey.
+              GTI Travels Pvt. Ltd. is a premium travel company built on the simple philosophy that where you stay shapes the soul of your entire journey.
             </p>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function AboutPage() {
               Born in Kumaon, Crafted for Discerned Travelers
             </h2>
             <p style={{ color: 'var(--atl-ink-700)', fontSize: '16px', lineHeight: 1.8, marginBottom: '16px' }}>
-              Started with a deep affection for the untamed jungles of Corbett and the tranquil pine valleys of Nainital, Atulya Hospitality emerged to bridge the gap between commercial hotel listings and genuinely bespoke, hospitable travel.
+              Started with a deep affection for the untamed jungles of Corbett and the tranquil pine valleys of Nainital, GTI Travels Pvt. Ltd. emerged to bridge the gap between commercial hotel listings and genuinely bespoke, hospitable travel.
             </p>
             <p style={{ color: 'var(--atl-ink-700)', fontSize: '16px', lineHeight: 1.8, marginBottom: '24px' }}>
               Every property in our portfolio is personally audited by our concierge team for hygiene, culinary excellence, natural serenity, and genuine customer care. We eliminate booking friction by securing the guaranteed best direct tariffs and authentic safari permits.
@@ -82,7 +82,7 @@ export default function AboutPage() {
           <div style={{ borderRadius: '28px', overflow: 'hidden', boxShadow: 'var(--atl-shadow-float)' }}>
             <img
               src="/images/team-banner-bg-1024x341.jpg"
-              alt="Atulya Hospitality Experience"
+              alt="GTI Travels Pvt. Ltd. Experience"
               style={{ width: '100%', height: '460px', objectFit: 'cover' }}
             />
           </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
           <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 48px' }}>
             <h2 style={{ fontSize: '32px', marginBottom: '14px' }}>Our Core Commitments</h2>
             <p style={{ color: 'var(--atl-ink-700)', fontSize: '15px' }}>
-              What sets Atulya Hospitality apart on every single journey.
+              What sets GTI Travels Pvt. Ltd. apart on every single journey.
             </p>
           </div>
 

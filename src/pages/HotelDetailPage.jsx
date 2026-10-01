@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Sparkles, ArrowRight, ShieldCheck, MessageCircle, Camera } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DatePicker, { formatDateValue, shiftDateValue } from '../components/DatePicker';
 import hotelsData from '../data/hotels.json';
+import { getDefaultMealPlan, getMealPlanRates, mealPlanOptions } from '../utils/mealPlans';
 
 
 export default function HotelDetailPage() {
   const { slug } = useParams();
-  const hotel = hotelsData.find((h) => h.slug === slug);
+  const fallbackHotel = hotelsData.find((h) => h.slug === slug);
+  const [hotel, setHotel] = useState(fallbackHotel);
 
   // Lightbox state
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -24,8 +26,7 @@ export default function HotelDetailPage() {
   // Interactive tab state
   const [activeTab, setActiveTab] = useState('overview');
 
-  // Meal Plan Selector state (EP, CP, MAP, AP)
-  const [selectedMealPlan, setSelectedMealPlan] = useState('CP');
+  const [selectedMealPlan, setSelectedMealPlan] = useState('');
 
   // Quote form state
   const [quoteForm, setQuoteForm] = useState({
@@ -35,6 +36,38 @@ export default function HotelDetailPage() {
     checkOut: ''
   });
   const [quoteSubmitted, setQuoteSubmitted] = useState(false);
+
+  const mealPlanRates = hotel ? getMealPlanRates(hotel) : {};
+
+  useEffect(() => {
+    setHotel(fallbackHotel);
+    if (!import.meta.env.DEV || !slug) return undefined;
+
+    let isCurrent = true;
+    fetch(`/api/hotels/${encodeURIComponent(slug)}`)
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error(`Could not load hotel data (${response.status}).`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (isCurrent) setHotel(data);
+      })
+      .catch((error) => {
+        console.error('Could not load local hotel data:', error);
+      });
+
+    return () => {
+      isCurrent = false;
+    };
+  }, [fallbackHotel, slug]);
+
+  useEffect(() => {
+    if (hotel) {
+      setSelectedMealPlan(getDefaultMealPlan(getMealPlanRates(hotel)));
+    }
+  }, [hotel]);
 
   if (!hotel) {
     return <Navigate to="/hotels/" replace />;
@@ -428,11 +461,7 @@ export default function HotelDetailPage() {
               <div className="atl-concierge-card">
                 {/* Concierge Pricing Header with Dynamic Meal Plan Calculation */}
                 {(() => {
-                  const baseRate = hotel.rateNum || 3699;
-                  const currentPrice = selectedMealPlan === 'EP' ? Math.max(2500, baseRate - 400)
-                    : selectedMealPlan === 'CP' ? baseRate
-                    : selectedMealPlan === 'MAP' ? baseRate + 800
-                    : baseRate + 1400;
+                  const currentPrice = mealPlanRates[selectedMealPlan] || 0;
 
                   return (
                     <div className="atl-concierge-header">
@@ -458,7 +487,7 @@ export default function HotelDetailPage() {
                               fontFamily: 'Playfair Display, serif'
                             }}
                           >
-                            ₹{currentPrice.toLocaleString('en-IN')}
+                            {currentPrice > 0 ? `₹${currentPrice.toLocaleString('en-IN')}` : 'Rates on request'}
                           </span>
                           <span
                             style={{
@@ -467,7 +496,7 @@ export default function HotelDetailPage() {
                               fontWeight: 500
                             }}
                           >
-                            /nt ({selectedMealPlan})
+                            {selectedMealPlan ? `/nt (${selectedMealPlan})` : ''}
                           </span>
                         </div>
                       </div>
@@ -490,15 +519,16 @@ export default function HotelDetailPage() {
                     </span>
                   </div>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px' }}>
-                    {[ 
-                      { code: 'Free BreakFast', label: '(CP)' },
-                      { code: 'Bkfst & Dinner', label: '(MAP)' },
-                      { code: 'All Meals', label: '(AP)' }
-                    ].map((item) => (
+                    {mealPlanOptions.map((item) => {
+                      const rate = mealPlanRates[item.code];
+                      const isUnavailable = rate <= 0;
+                      return (
                       <button
                         key={item.code}
                         type="button"
                         onClick={() => setSelectedMealPlan(item.code)}
+                        disabled={isUnavailable}
+                        aria-pressed={selectedMealPlan === item.code}
                         style={{
                           padding: '6px 2px',
                           borderRadius: '8px',
@@ -507,20 +537,26 @@ export default function HotelDetailPage() {
                           border: selectedMealPlan === item.code ? '1.5px solid #3a2b14' : '1px solid rgba(208, 197, 175, 0.6)',
                           background: selectedMealPlan === item.code ? '#3a2b14' : '#ffffff',
                           color: selectedMealPlan === item.code ? '#ffffff' : 'var(--atl-ink-800)',
-                          cursor: 'pointer',
+                          cursor: isUnavailable ? 'not-allowed' : 'pointer',
+                          opacity: isUnavailable ? 0.55 : 1,
                           transition: 'all 0.2s ease',
                           textAlign: 'center'
                         }}
                       >
-                        <div>{item.code}</div>
+                        <div>{item.name}</div>
                         <div style={{ fontSize: '9.5px', opacity: 0.8, fontWeight: 500 }}>{item.label}</div>
+                        <div style={{ fontSize: '10px', marginTop: '3px' }}>
+                          {rate > 0 ? `₹${rate.toLocaleString('en-IN')}` : 'Unavailable'}
+                        </div>
                       </button>
-                    ))}
+                      );
+                    })}
                   </div>
                   <div style={{ fontSize: '11px', color: 'var(--atl-ink-600)', marginTop: '8px', textAlign: 'center' }}>
-                    {selectedMealPlan === 'EP' && 'Room Only (No Meals Included)'} 
+                    {selectedMealPlan === 'CP' && '✦ Breakfast Included'}
                     {selectedMealPlan === 'MAP' && '✦ Breakfast + Dinner Included'}
                     {selectedMealPlan === 'AP' && '✦ All 3 Meals (Breakfast, Lunch & Dinner)'}
+                    {!selectedMealPlan && 'No meal plans are currently available.'}
                   </div>
                 </div>
 
@@ -632,8 +668,8 @@ export default function HotelDetailPage() {
 
                     {/* Instant WhatsApp Concierge Button */}
                     <a
-                      href={`https://wa.me/919315517530?text=${encodeURIComponent(
-                        `Hi Atulya Hospitality! I would like to inquire about booking at ${hotel.title} (${selectedMealPlan} plan${quoteForm.checkIn ? `, Check-in: ${quoteForm.checkIn}` : ''}${quoteForm.checkOut ? ` to ${quoteForm.checkOut}` : ''}). Please share available rooms and best rate.`
+                      href={`https://wa.me/919717327225?text=${encodeURIComponent(
+                        `Hi GTI Travels Pvt. Ltd.! I would like to inquire about booking at ${hotel.title} (${selectedMealPlan} plan${quoteForm.checkIn ? `, Check-in: ${quoteForm.checkIn}` : ''}${quoteForm.checkOut ? ` to ${quoteForm.checkOut}` : ''}). Please share available rooms and best rate.`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -682,7 +718,7 @@ export default function HotelDetailPage() {
                     }}
                   >
                     {hotel.offerText ||
-                      "Connect with Atulya Hospitality for negotiated resort tariffs, confirmed safari permits and tailored itineraries across Corbett."}
+                      "Connect with GTI Travels Pvt. Ltd. for negotiated resort tariffs, confirmed safari permits and tailored itineraries across Corbett."}
                   </p>
                 </div>
               </div>
@@ -804,7 +840,7 @@ export default function HotelDetailPage() {
                         </div>
                         <div className="atl-room-slide-actions">
                           <a
-                            href="tel:+919315517530"
+                            href="tel:+919717327225"
                             aria-label="Call to book"
                             className="atl-icon-btn-fill atl-icon-btn-gold"
                           >
@@ -823,7 +859,7 @@ export default function HotelDetailPage() {
                             </svg>
                           </a>
                           <a
-                            href={`https://wa.me/919315517530?text=I%20have%20an%20inquiry%20about%20${encodeURIComponent(
+                            href={`https://wa.me/919717327225?text=I%20have%20an%20inquiry%20about%20${encodeURIComponent(
                               hotel.title + ' - ' + room.name
                             )}`}
                             target="_blank"

@@ -750,7 +750,12 @@ button.atl-btn-gold-fill:hover {
 .atl-kicker-caps-light {
   color: var(--atl-gold-dim);
 }
-
+@media (max-width:386px) {
+   .atl-section-title span{
+    font-size:28px !important;
+   }
+   
+}
 .atl-section-title {
   font-family: var(--atl-font-display);
   font-size: 32px;

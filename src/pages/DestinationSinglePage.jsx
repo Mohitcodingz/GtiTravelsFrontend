@@ -5,10 +5,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HotelCard from '../components/HotelCard';
 import destinationsData from '../data/destinations.json';
-import hotelsData from '../data/hotels.json';
+import useHotelCatalog from '../hooks/useHotelCatalog';
 
 export default function DestinationSinglePage() {
   const { slug } = useParams();
+  const hotelsData = useHotelCatalog();
   const destination = destinationsData.find((d) => d.slug === slug);
 
   if (!destination) {
@@ -201,8 +202,8 @@ export default function DestinationSinglePage() {
                 <span style={{ fontSize: '12px', color: 'var(--atl-ink-500)', display: 'block', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                   Concierge Hotline
                 </span>
-                <a href="tel:+919315517530" style={{ fontSize: '16px', fontWeight: 700, color: 'var(--atl-ink-900)', display: 'block', marginTop: '2px' }}>
-                  +91-9315517530
+                <a href="tel:+919717327225" style={{ fontSize: '16px', fontWeight: 700, color: 'var(--atl-ink-900)', display: 'block', marginTop: '2px' }}>
+                  +91-9717327225
                 </a>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, CreditCard, Building2, CheckCircle2, Phone } from 'lucide-react';
 import Header from '../components/Header';
@@ -60,7 +60,7 @@ export default function PaymentDetailsPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px' }}>
               <div>
                 <span style={{ fontSize: '12px', color: 'var(--atl-ink-500)', display: 'block' }}>Account Name</span>
-                <span style={{ fontSize: '15px', fontWeight: 700, color: 'var(--atl-ink-900)' }}>ATULYA HOSPITALITY</span>
+                <span style={{ fontSize: '15px', fontWeight: 700, color: 'var(--atl-ink-900)' }}>GTI Travels Pvt. Ltd.</span>
               </div>
               <div>
                 <span style={{ fontSize: '12px', color: 'var(--atl-ink-500)', display: 'block' }}>Bank Name</span>
@@ -108,7 +108,7 @@ export default function PaymentDetailsPage() {
             <div style={{ background: 'var(--atl-surface)', padding: '16px 20px', borderRadius: '14px', border: '1px dashed var(--atl-gold)' }}>
               <span style={{ fontSize: '12px', color: 'var(--atl-ink-500)', display: 'block' }}>Official VPA / UPI ID</span>
               <span style={{ fontSize: '18px', fontWeight: 700, color: 'var(--atl-gold-deep)' }}>
-                atulyahospitality@hdfcbank
+                gtitravels@hdfcbank
               </span>
             </div>
           </div>
@@ -127,12 +127,11 @@ export default function PaymentDetailsPage() {
               <span>Payment Confirmation Protocol</span>
             </div>
             <p style={{ fontSize: '14px', color: 'var(--atl-ink-700)', lineHeight: 1.7, margin: 0 }}>
-              After executing your transfer, please share the transaction UTR / screenshot with your booking representative via WhatsApp at <strong>+91-9315517530</strong> or email <strong>booking@atulyahospitality.com</strong>. Your official booking confirmation voucher and safari permits will be issued immediately upon receipt.
+              After executing your transfer, please share the transaction UTR / screenshot with your booking representative via WhatsApp at <strong>+91-9717327225</strong> or email <strong>contact@globaltourismindia.com</strong>. Your official booking confirmation voucher and safari permits will be issued immediately upon receipt.
             </p>
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );

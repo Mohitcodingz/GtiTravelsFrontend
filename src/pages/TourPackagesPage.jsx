@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -261,10 +261,10 @@ export default function TourPackagesPage() {
         </section>
 
         {/* Section 3: Let Us Build Your Itinerary CTA Banner (Matching Image 3) */}
-        <section className="atl-container atl-section-lg">
-          <div className="atl-cta-panel">
-            <div className="atl-cta-glow"></div>
-            <div className="atl-cta-flex">
+        {/* <section className="atl-container atl-section-lg"> */}
+          {/* <div className="atl-cta-panel"> */}
+            {/* <div className="atl-cta-glow"></div> */}
+            {/* <div className="atl-cta-flex">
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: '12px', maxWidth: '520px', textAlign: 'left' }}>
                 <span className="atl-cta-eyebrow">Not Sure Which Package?</span>
                 <h2 className="atl-cta-title">Let Us Build Your Itinerary</h2>
@@ -282,9 +282,9 @@ export default function TourPackagesPage() {
                 </svg>
                 Call Now: 9315517530
               </a>
-            </div>
-          </div>
-        </section>
+            </div> */}
+          {/* </div> */}
+        {/* </section> */}
       </main>
 
       <Footer />

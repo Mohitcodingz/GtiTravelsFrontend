@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 import { MessageCircle, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import DatePicker, { formatDateValue, shiftDateValue } from './DatePicker';
 
@@ -35,7 +35,7 @@ export default function BookingSidebar({ hotel, selectedRoom, onSelectRoom }) {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Atulya Hospitality,\nI would like to book:\n` +
+    `Hello GTI Travels Pvt. Ltd.,\nI would like to book:\n` +
     `• Hotel: ${hotel.title}\n` +
     `• Room: ${activeRoom.name}\n` +
     `• Check-in: ${checkIn}\n` +
@@ -100,8 +100,8 @@ export default function BookingSidebar({ hotel, selectedRoom, onSelectRoom }) {
             We are holding the <strong>{activeRoom.name}</strong> for {nights} {nights === 1 ? 'night' : 'nights'}. Our concierge will contact you shortly to confirm your booking.
           </p>
           <a
-            href={`https://wa.me/919315517530?text=${whatsappMessage}`}
-            target="_blank"
+            href={`https://wa.me/919717327225?text=${whatsappMessage}`}
+            target="_blank"  
             rel="noopener noreferrer"
             className="atl-btn atl-btn-whatsapp atl-btn-block"
             style={{ justifyContent: 'center' }}
@@ -273,7 +273,7 @@ export default function BookingSidebar({ hotel, selectedRoom, onSelectRoom }) {
           </button>
 
           <a
-            href={`https://wa.me/919315517530?text=${whatsappMessage}`}
+            href={`https://wa.me/919717327225?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             className="atl-btn atl-btn-whatsapp atl-btn-block"

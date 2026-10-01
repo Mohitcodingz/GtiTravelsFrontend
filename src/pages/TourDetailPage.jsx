@@ -110,7 +110,7 @@ export default function TourDetailPage() {
                     </div>
 
                     <div className="atl-sidebar-contact">
-                      <a href="tel:+919315517530" className="atl-sidebar-contact-row" style={{ textDecoration: 'none' }}>
+                      <a href="tel:+919717327225" className="atl-sidebar-contact-row" style={{ textDecoration: 'none' }}>
                         <span className="atl-sidebar-contact-icon">
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="atl-shrink-0">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -118,10 +118,10 @@ export default function TourDetailPage() {
                         </span>
                         <div>
                           <span className="atl-sidebar-contact-label">Phone</span>
-                          <span className="atl-sidebar-contact-value">9315517530</span>
+                          <span className="atl-sidebar-contact-value">+91-9717327225</span>
                         </div>
                       </a>
-                      <a href="mailto:sales@atulyahospitality.com" className="atl-sidebar-contact-row" style={{ textDecoration: 'none' }}>
+                      <a href="mailto:contact@globaltourismindia.com" className="atl-sidebar-contact-row" style={{ textDecoration: 'none' }}>
                         <span className="atl-sidebar-contact-icon">
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="atl-shrink-0">
                             <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -130,7 +130,7 @@ export default function TourDetailPage() {
                         </span>
                         <div>
                           <span className="atl-sidebar-contact-label">Email</span>
-                          <span className="atl-sidebar-contact-value">sales@atulyahospitality.com</span>
+                          <span className="atl-sidebar-contact-value">contact@globaltourismindia.com</span>
                         </div>
                       </a>
                     </div>

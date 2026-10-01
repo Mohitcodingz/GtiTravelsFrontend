@@ -1,8 +1,10 @@
-import React, { useState, useMemo } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, ArrowRight, Sparkles, MapPin } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import useHotelCatalog from '../hooks/useHotelCatalog';
+import { getStartingRate } from '../utils/mealPlans';
 
 
 const corbettResorts = [
@@ -284,6 +286,7 @@ const corbettResorts = [
 ];
 
 export default function HotelsPage() {
+  const hotelCatalog = useHotelCatalog();
   const [selectedRating, setSelectedRating] = useState('all');
   const [selectedPriceTier, setSelectedPriceTier] = useState('all');
   const [sortBy, setSortBy] = useState('recommended');
@@ -295,8 +298,32 @@ export default function HotelsPage() {
     return isNaN(num) ? 99999 : num;
   };
 
+  const resorts = useMemo(
+    () =>
+      corbettResorts.map((listing) => {
+        const hotel = hotelCatalog.find((item) => item.slug === listing.slug);
+        if (!hotel) return listing;
+
+        const startingRate = getStartingRate(hotel);
+        return {
+          ...listing,
+          title: hotel.title,
+          starRating: String(hotel.starCount || listing.starCount),
+          ratingLabel: hotel.ratingLabel || listing.ratingLabel,
+          starCount: hotel.starCount || listing.starCount,
+          price: startingRate
+            ? `₹${startingRate.toLocaleString('en-IN')}`
+            : 'Rates on request',
+          priceUnit: startingRate ? '/night' : '',
+          image: hotel.heroImage || listing.image,
+          description: hotel.overview || listing.description
+        };
+      }),
+    [hotelCatalog]
+  );
+
   const filteredResorts = useMemo(() => {
-    let list = corbettResorts.filter((r) => {
+    let list = resorts.filter((r) => {
       const matchesRating = selectedRating === 'all' || r.starRating === selectedRating;
       const numPrice = parsePrice(r.price);
       const matchesPrice = selectedPriceTier === 'all' ||
@@ -319,7 +346,7 @@ export default function HotelsPage() {
     }
 
     return list;
-  }, [selectedRating, selectedPriceTier, sortBy, searchQuery]);
+  }, [resorts, selectedRating, selectedPriceTier, sortBy, searchQuery]);
 
   return (
     <div className="atl-page-wrap">
@@ -355,7 +382,7 @@ export default function HotelsPage() {
             </h1>
             <div className="atl-page-title-text" style={{ textAlign: 'left', margin: 0, maxWidth: '640px' }}>
               <p style={{ textAlign: 'left' }}>
-                Atulya Hospitality works closely with resorts in Jim Corbett and helps travellers choose their stay based on budget, location, safari plans and the type of holiday they are looking for.
+                GTI Travels Pvt. Ltd. works closely with resorts in Jim Corbett and helps travellers choose their stay based on budget, location, safari plans and the type of holiday they are looking for.
               </p>
             </div>
           </div>
@@ -378,7 +405,7 @@ export default function HotelsPage() {
                   onClick={() => setSelectedRating('all')}
                 >
                   <span>All</span>
-                  <span style={{ fontSize: '10.5px', opacity: 0.85 }}>({corbettResorts.length})</span>
+                  <span style={{ fontSize: '10.5px', opacity: 0.85 }}>({resorts.length})</span>
                 </button>
                 <button
                   type="button"
@@ -532,7 +559,7 @@ export default function HotelsPage() {
                       <ArrowRight size={15} />
                     </Link>
                     {/* <a
-                      href={`https://wa.me/919315517530?text=Hello%20Atulya%20Hospitality!%20Please%20share%20room%20availability%20and%20rates%20for%20${encodeURIComponent(resort.title)}.`}
+                      href={`https://wa.me/919315517530?text=Hello%20GTI%20Travels%20Pvt.%20Ltd.!%20Please%20share%20room%20availability%20and%20rates%20for%20${encodeURIComponent(resort.title)}.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="atl-card-whatsapp-quick"
@@ -650,7 +677,7 @@ export default function HotelsPage() {
                 Corbett resort rates can change considerably on weekends, long weekends, festive dates and during high-demand travel periods.
               </p>
               <p style={{ textAlign: 'left', marginBottom: '12px', fontWeight: 700, color: 'var(--atl-ink-900)' }}>
-                Atulya Hospitality's Corbett Stay Tip
+                GTI Travels Pvt. Ltd.'s Corbett Stay Tip
               </p>
               <p style={{ textAlign: 'left', marginBottom: '16px' }}>
                 <strong>For a safari-focused trip:</strong> Choose your safari zone first and resort location second.<br />

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -32,8 +32,8 @@ export default function LegalPage({ type }) {
             <h1 className="atl-page-title-heading" style={{ margin: '8px auto 12px' }}>{title}</h1>
             <p className="atl-page-title-text" style={{ margin: '0 auto', maxWidth: '640px' }}>
               {isPrivacy
-                ? 'How we collect, use, and protect your information when you book a stay with Atulya Hospitality.'
-                : 'The terms and conditions that apply when you book and stay with Atulya Hospitality.'}
+                ? 'How we collect, use, and protect your information when you book a stay with GTI Travels Pvt. Ltd.'
+                : 'The terms and conditions that apply when you book and stay with GTI Travels Pvt. Ltd.'}
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function LegalPage({ type }) {
             <div>
               <h3 style={{ fontSize: '20px', color: 'var(--atl-ink-900)', marginBottom: '12px' }}>1. Information We Collect</h3>
               <p style={{ marginBottom: '20px' }}>
-                Atulya Hospitality collects information necessary to confirm your travel reservations, including your name, contact phone number, email address, identity proof details (required for government forest department safari permits), and stay preferences.
+                GTI Travels Pvt. Ltd. collects information necessary to confirm your travel reservations, including your name, contact phone number, email address, identity proof details (required for government forest department safari permits), and stay preferences.
               </p>
 
               <h3 style={{ fontSize: '20px', color: 'var(--atl-ink-900)', marginBottom: '12px' }}>2. Use of Information</h3>
@@ -71,14 +71,14 @@ export default function LegalPage({ type }) {
 
               <h3 style={{ fontSize: '20px', color: 'var(--atl-ink-900)', marginBottom: '12px' }}>4. Contact Us</h3>
               <p>
-                If you have any questions regarding your data privacy, please reach out to us at <strong>booking@atulyahospitality.com</strong> or call <strong>+91-9315517530</strong>.
+                If you have any questions regarding your data privacy, please reach out to us at <strong>contact@globaltourismindia.com</strong> or call <strong>+91-9717327225</strong>.
               </p>
             </div>
           ) : (
             <div>
               <h3 style={{ fontSize: '20px', color: 'var(--atl-ink-900)', marginBottom: '12px' }}>1. Booking &amp; Reservation Confirmation</h3>
               <p style={{ marginBottom: '20px' }}>
-                Bookings made through Atulya Hospitality are confirmed upon receipt of advance deposit and issuance of an official booking voucher. Rates quoted include specified meal plans and mandatory taxes as listed on your invoice.
+                Bookings made through GTI Travels Pvt. Ltd. are confirmed upon receipt of advance deposit and issuance of an official booking voucher. Rates quoted include specified meal plans and mandatory taxes as listed on your invoice.
               </p>
 
               <h3 style={{ fontSize: '20px', color: 'var(--atl-ink-900)', marginBottom: '12px' }}>2. Wildlife Safari Regulations</h3>
@@ -93,7 +93,7 @@ export default function LegalPage({ type }) {
 
               <h3 style={{ fontSize: '20px', color: 'var(--atl-ink-900)', marginBottom: '12px' }}>4. Jurisdiction</h3>
               <p>
-                Any legal disputes arising out of bookings or services provided by Atulya Hospitality shall be subject to the exclusive jurisdiction of the competent courts in Ramnagar, Nainital District, Uttarakhand.
+                Any legal disputes arising out of bookings or services provided by GTI Travels Pvt. Ltd. shall be subject to the exclusive jurisdiction of the competent courts in Ramnagar, Nainital District, Uttarakhand.
               </p>
             </div>
           )}

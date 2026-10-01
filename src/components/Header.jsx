@@ -78,11 +78,11 @@ export default function Header() {
         {/* Phone CTA */}
         <div className="atl-nav-cta">
           <a
-            href="tel:+919315517530"
+            href="tel:+919717327225"
             className="atl-btn atl-btn-dark atl-btn-sm"
           >
             <Phone size={15} className="atl-shrink-0" />
-            <span>Call +91-9315517530</span>
+            <span>Call +91-9717327225</span>
           </a>
         </div>
 
@@ -122,12 +122,12 @@ export default function Header() {
         {/* Mobile Action Buttons */}
         <div className="atl-nav-mobile-actions" style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '16px' }}>
           <a
-            href="tel:+919315517530"
+            href="tel:+919717327225"
             className="atl-btn atl-btn-dark atl-btn-block"
             style={{ justifyContent: 'center' }}
           >
             <Phone size={15} />
-            <span>Call +91-9315517530</span>
+            <span>Call +91-9717327225</span>
           </a>
         </div>
       </div>

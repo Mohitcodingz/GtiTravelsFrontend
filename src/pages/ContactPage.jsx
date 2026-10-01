@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -122,7 +122,7 @@ export default function ContactPage() {
                   Message Sent Successfully!
                 </h3>
                 <p style={{ color: 'var(--atl-ink-700)', fontSize: '15px', lineHeight: 1.6, marginBottom: '24px' }}>
-                  Thank you for reaching out to Atulya Hospitality. Our travel concierge will get back to you shortly.
+                  Thank you for reaching out to GTI Travels Pvt. Ltd. Our travel concierge will get back to you shortly.
                 </p>
                 <button
                   type="button"
@@ -328,8 +328,8 @@ export default function ContactPage() {
                 <div>
                   <span className="atl-contact-info-label" style={{ color: '#e9c349' }}>Phone</span>
                   <span className="atl-contact-info-value">
-                    <a href="tel:+919315517530" style={{ color: '#ffffff', textDecoration: 'none' }}>
-                      9315517530
+                    <a href="tel:+919717327225" style={{ color: '#ffffff', textDecoration: 'none' }}>
+                      +91-9717327225
                     </a>
                   </span>
                 </div>
@@ -345,8 +345,8 @@ export default function ContactPage() {
                 <div>
                   <span className="atl-contact-info-label" style={{ color: '#e9c349' }}>Email</span>
                   <span className="atl-contact-info-value">
-                    <a href="mailto:sales@atulyahospitality.com" style={{ color: '#ffffff', textDecoration: 'none' }}>
-                      sales@atulyahospitality.com
+                    <a href="mailto:contact@globaltourismindia.com" style={{ color: '#ffffff', textDecoration: 'none' }}>
+                      contact@globaltourismindia.com
                     </a>
                   </span>
                 </div>
@@ -362,7 +362,7 @@ export default function ContactPage() {
                 <div>
                   <span className="atl-contact-info-label" style={{ color: '#e9c349' }}>Office</span>
                   <span className="atl-contact-info-value" style={{ lineHeight: 1.45, display: 'block', fontSize: '14.5px' }}>
-                    Delhi – 663, 2nd Floor, Kakrola Housing Complex, Near Dwarka Mor, New Delhi – 110078
+                    314, Laxmi Deep Building, District Centre, Laxmi Nagar, New Delhi, India - 110092
                   </span>
                 </div>
               </div>
@@ -383,7 +383,7 @@ export default function ContactPage() {
               </div>
 
               <a
-                href="https://wa.me/919315517530?text=I%20have%20an%20inquiry%20about%20Contact"
+                href="https://wa.me/919717327225?text=I%20have%20an%20inquiry%20about%20Contact"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="atl-whatsapp-btn"
@@ -456,8 +456,8 @@ export default function ContactPage() {
             }}
           >
             <iframe
-              title="Atulya Hospitality Office Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.7529918012237!2d76.96878079999999!3d28.607186100000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c58067d7d3%3A0xdf61de0a6d83c0c7!2sAtulya%20Hospitality!5e0!3m2!1sen!2sin!4v1785031645949!5m2!1sen!2sin"
+              title="GTI Travels Pvt. Ltd. Office Location"
+              src="https://www.google.com/maps?q=314,+Laxmi+Deep+Building,+District+Centre,+Laxmi+Nagar,+New+Delhi+-+110092&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, display: 'block' }}

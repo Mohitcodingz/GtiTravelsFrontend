@@ -1,17 +1,17 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
     <footer className="atl-footer">
       {/* Ready When You Are CTA */}
-      <div className="atl-footer-cta-wrap">
+      {/* <div className="atl-footer-cta-wrap">
         <div className="atl-footer-cta">
           <div className="atl-footer-cta-copy">
             <span className="atl-footer-cta-kicker">Ready When You Are</span>
             <h2 className="atl-footer-cta-title">Plan Your Next Stay</h2>
             <p className="atl-footer-cta-text">
-              Find the right stay for your next getaway with handpicked options, personalised recommendations and seamless booking assistance from Atulya Hospitality.
+              Find the right stay for your next getaway with handpicked options, personalised recommendations and seamless booking assistance from GTI Travels Pvt. Ltd.
             </p>
             <div className="atl-flex atl-items-center atl-gap-3 atl-flex-wrap" style={{ marginBottom: '32px' }}>
               <span className="atl-trust-pill">
@@ -49,7 +49,7 @@ export default function Footer() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Footer Links */}
       <div className="atl-footer-links">
@@ -67,25 +67,6 @@ export default function Footer() {
             <p className="atl-footer-brand-text">
               From luxury resorts to scenic hillside stays, GTI Travels brings you carefully selected hotels and resorts across India, chosen for their comfort, location and memorable travel experiences.
             </p>
-            <div className="atl-footer-social">
-              <a href="https://www.facebook.com/atulyahospitality/" aria-label="Facebook" className="atl-icon-btn" target="_blank" rel="noopener noreferrer">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3a2b14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="atl-shrink-0">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-              </a>
-              <a href="https://www.instagram.com/atulya_hospitality/" aria-label="Instagram" className="atl-icon-btn" target="_blank" rel="noopener noreferrer">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3a2b14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="atl-shrink-0">
-                  <rect x="2" y="2" width="20" height="20" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
-                </svg>
-              </a>
-              <a href="https://twitter.com/Atulya2230" aria-label="Twitter" className="atl-icon-btn" target="_blank" rel="noopener noreferrer">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3a2b14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="atl-shrink-0">
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
-                </svg>
-              </a>
-            </div>
           </div>
 
           <div className="atl-footer-col">
@@ -118,8 +99,8 @@ export default function Footer() {
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
                 </span>
-                <a href="tel:+919315517530" className="atl-footer-contact-text" style={{ color: 'inherit' }}>
-                  9315517530
+                <a href="tel:+919717327225" className="atl-footer-contact-text" style={{ color: 'inherit' }}>
+                  9717327225
                 </a>
               </div>
               <div className="atl-footer-contact-row is-start">
@@ -130,7 +111,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <span className="atl-footer-contact-text">
-                  Delhi – 663, 2nd Floor, Kakrola Housing Complex, Near Dwarka Mor, New Delhi – 110078
+                  314, Laxmi Deep Building, District Centre, Laxmi Nagar, New Delhi, India - 110092
                 </span>
               </div>
               <div className="atl-footer-contact-row">
@@ -140,8 +121,8 @@ export default function Footer() {
                     <path d="m2 7 10 6 10-6" />
                   </svg>
                 </span>
-                <a href="mailto:sales@atulyahospitality.com" className="atl-footer-contact-text" style={{ color: 'inherit' }}>
-                  sales@atulyahospitality.com
+                <a href="mailto:contact@globaltourismindia.com" className="atl-footer-contact-text" style={{ color: 'inherit' }}>
+                  contact@globaltourismindia.com
                 </a>
               </div>
               <div className="atl-footer-contact-row">
@@ -151,7 +132,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <a
-                  href="https://wa.me/919315517530?text=Hello%20GTI%20Travels,%20I%20want%20to%20inquire%20about%20a%20stay."
+                  href="https://wa.me/919717327225?text=Hello%20GTI%20Travels,%20I%20want%20to%20inquire%20about%20a%20stay."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="atl-footer-contact-text"

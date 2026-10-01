@@ -7,9 +7,9 @@ export default function MobileStickyBar() {
       <div className="atl-mobile-sticky-inner"  >
         {/* Phone Button */}
         <a
-          href="tel:+919315517530"
+          href="tel:+919717327225"
           className="atl-mobile-sticky-btn"
-          aria-label="Call Atulya Hospitality"
+          aria-label="Call GTI Travels Pvt. Ltd."
         >
           <Phone size={17} strokeWidth={2.2} className="atl-shrink-0" />
           <span >PHONE</span>
@@ -20,7 +20,7 @@ export default function MobileStickyBar() {
 
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/919315517530?text=Hello%20Atulya%20Hospitality,%20I%20want%20to%20inquire%20about%20a%20stay."
+          href="https://wa.me/919717327225?text=Hello%20GTI%20Travels%20Pvt.%20Ltd.,%20I%20want%20to%20inquire%20about%20a%20stay."
           target="_blank"
           rel="noopener noreferrer"
           className="atl-mobile-sticky-btn"

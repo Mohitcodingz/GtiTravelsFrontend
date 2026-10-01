@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Compass, MapPin, Sparkles, CheckCircle2, ChevronRight, ShieldCheck, Calendar, Users, Eye, HelpCircle, Trees, Waves, Mountain, Castle, PhoneCall, Star, Check } from 'lucide-react';
 
@@ -112,21 +112,21 @@ export default function HomePage() {
                 <div className="atl-hero-white-card">
                   <div className="atl-hero-kicker-pill">
                     <Sparkles size={13} style={{ color: '#3a2b14' }} />
-                    <span>Curated Retreats &amp; Wildlife Safaris</span>
+                    <span>JIM CORBETT SAFARIS & WILDLIFE EXPERIENCES</span>
                   </div>
 
                   <h1
                     className="atl-section-title"
                     style={{
-                      fontSize: 'clamp(32px, 3.6vw, 44px)',
+                      fontSize: 'clamp(25px, 3.6vw, 42px)',
                       lineHeight: 1.12,
                       margin: '0 0 8px',
                       fontFamily: 'Playfair Display, serif',
                       color: 'var(--atl-ink-900)'
                     }}
                   >
-                    Your Stay,<br />
-                    <span style={{ fontStyle: 'italic', fontWeight: 600 }}>Our Purpose</span>{' '}
+                    Your Experience,<br />
+                    <span style={{ fontStyle: 'italic', fontWeight: 600 }}>Our Commitment</span>{' '}
                     <span style={{ color: '#3a2b14' }}>✦</span>
                   </h1>
 
@@ -143,12 +143,12 @@ export default function HomePage() {
                       lineHeight: 1.68
                     }}
                   >
-                   GTI Travels Pvt. Ltd. Resorts, Hotels &amp; Holiday Experiences Across India. Discover carefully selected stays in Jim Corbett, Ranthambore, Nainital, Bhimtal, Mukteshwar and more, with personalised booking assistance from our travel experts.
+                    We guide you to visit the best season for Jim Corbett National Park Safari to enjoy fully.Wild Journey Corbett, a part of GTI Travels Pvt. Ltd. provides travel assistance to domestic and international visitors traveling to Corbett. Our services include hotel bookings, tour packages, and jungle safari booking assistance.
                   </p>
 
                   <div className="atl-hero-btn-group">
                     <Link
-                      to="/contact/"
+                      to="/hotels/"
                       className="atl-btn atl-btn-dark"
                       style={{
                         borderRadius: '9999px',
@@ -161,12 +161,12 @@ export default function HomePage() {
                         boxShadow: '0 6px 18px rgba(0,0,0,0.16)'
                       }}
                     >
-                      <span>Reserve a Stay</span>
+                      <span>Stay wity Us</span>
                       <ArrowRight size={17} className="atl-shrink-0" />
                     </Link>
 
                     <Link
-                      to="/hotels/"
+                      to="/tour-packages/"
                       className="atl-btn atl-btn-outline"
                       style={{
                         borderRadius: '9999px',
@@ -178,7 +178,7 @@ export default function HomePage() {
                         color: 'var(--atl-ink-900)'
                       }}
                     >
-                      <span>Explore Resorts</span>
+                      <span>Memorable Tour</span>
                       <ChevronRight size={16} />
                     </Link>
                   </div>
@@ -198,10 +198,10 @@ export default function HomePage() {
                       ✦
                     </span>
                     <div className="atl-stat-value" style={{ color: '#ffffff', fontFamily: 'Playfair Display, serif', fontWeight: 700 }}>
-                      10k+
+                      45k+
                     </div>
                     <div className="atl-stat-label" style={{ color: 'rgba(255,255,255,0.78)', fontWeight: 500 }}>
-                      Happy Guests Hosted
+                      Happy Guests
                     </div>
                   </div>
 
@@ -217,10 +217,10 @@ export default function HomePage() {
                       ✦
                     </span>
                     <div className="atl-stat-value" style={{ color: 'var(--atl-ink-900)', fontFamily: 'Playfair Display, serif', fontWeight: 700 }}>
-                      100+
+                      52+
                     </div>
                     <div className="atl-stat-label" style={{ color: 'var(--atl-ink-700)', fontWeight: 500 }}>
-                      Curated Hotel Tie-Ups
+                     Resort Tie-Ups
                     </div>
                   </div>
 
@@ -236,10 +236,10 @@ export default function HomePage() {
                       ✦
                     </span>
                     <div className="atl-stat-value" style={{ color: 'var(--atl-ink-900)', fontFamily: 'Playfair Display, serif', fontWeight: 700 }}>
-                      16+
+                      19+
                     </div>
                     <div className="atl-stat-label" style={{ color: 'var(--atl-ink-700)', fontWeight: 500 }}>
-                      Years of Hospitality
+                      Years in Hospitality
                     </div>
                   </div>
                 </div>
@@ -248,23 +248,11 @@ export default function HomePage() {
               {/* Right Column: Immovable 2x2 Quad Visual Grid with Equal Ratio Boxes */}
               <div className="atl-col-12 atl-lg-col-6 atl-hero-quad-col" style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
                 <div className="atl-hero-quad-wrap">
-                  {/* Row 1 - Box 1: Signature Sanctuary */}
-                  <Link to="/hotels/" className="atl-hero-quad-box" aria-label="Explore Signature Resorts">
-                    <img
-                      src="/images/home_hero_image_3.webp"
-                      alt="Signature Resort Sanctuary"
-                      loading="eager"
-                    />
-                    <div className="atl-hero-quad-overlay" />
-                    <div className="atl-hero-quad-badge">
-                      <span>Tour Package</span>
-                    </div>
-                  </Link>
 
-                  {/* Row 1 - Box 2: Wildlife Safari */}
+                  {/* Row 1 - Box 1: Wildlife Safari */}
                   <Link to="/jim-corbett-safari-booking/" className="atl-hero-quad-box" aria-label="Book Jungle Safari">
                     <img
-                      src="/images/home_hero_image_1.webp"
+                      src="/images/forJungleSafari.jpg"
                       alt="Forest Reserve & Wildlife Safari"
                       loading="eager"
                     />
@@ -274,10 +262,10 @@ export default function HomePage() {
                     </div>
                   </Link>
 
-                  {/* Row 2 - Box 1: Kosi Riverfront */}
+                  {/* Row 2 - Box 2: Kosi Riverfront */}
                   <Link to="/resorts-in-jim-corbett/" className="atl-hero-quad-box" aria-label="View Riverfront Resorts">
                     <img
-                      src="/images/home_hero_image_2.webp"
+                      src="images/forHotelBooking.jpg"
                       alt="Kosi Riverfront Resort Experience"
                       loading="eager"
                     />
@@ -287,10 +275,26 @@ export default function HomePage() {
                     </div>
                   </Link>
 
+                  {/* Row 2 - Box 1: Signature Sanctuary */}
+                  <Link to="/hotels/" className="atl-hero-quad-box" aria-label="Explore Signature Resorts">
+                    <img
+                      src="/images/forTour.jpg"
+                      alt="Signature Resort Sanctuary"
+                      loading="eager"
+                    />
+                    <div className="atl-hero-quad-overlay" />
+                    <div className="atl-hero-quad-badge">
+                      <span>Tour Package</span>
+                    </div>
+                  </Link>
+
+
+
+
                   {/* Row 2 - Box 2: Scenic Nature & Mountains */}
                   <Link to="/destinations/" className="atl-hero-quad-box" aria-label="Explore Curated Destinations">
                     <img
-                      src="/images/jim-corbett-atulya.jpg"
+                      src="/images/forGroupBooking.jpg"
                       alt="Scenic Nature & Heritage Stays"
                       loading="eager"
                     />
@@ -310,9 +314,9 @@ export default function HomePage() {
         {/* 1. About Us Section (Bespoke Bento Arrangement with Interactive Pillar Cards) */}
         <section className="atl-container atl-grid atl-gap-10 atl-items-center" style={{ paddingTop: '64px', paddingBottom: '64px' }}>
           <div className="atl-col-12 atl-lg-col-5">
-            <span className="atl-kicker">✦ Our Heritage &amp; Purpose</span>
+            <span className="atl-kicker">✦ Our Approach & Commitment✦</span>
             <h2 className="atl-section-title" style={{ margin: '10px 0 16px', lineHeight: 1.18 }}>
-              Travel Experiences Built Around the Right Stay
+              Your Corbett Journey, Planned With Care
             </h2>
 
             <div style={{
@@ -332,15 +336,19 @@ export default function HomePage() {
                 margin: 0,
                 lineHeight: 1.55
               }}>
-                "Where thoughtful hospitality meets untamed wilderness and tranquil hill escapes."
+                "Reliable travel assistance for a comfortable, informed, and memorable Corbett experience"
               </p>
             </div>
 
             <p style={{ color: 'var(--atl-ink-700)', fontSize: '15px', lineHeight: '26px', margin: '0 0 24px' }}>
-              Atulya Hospitality helps travellers find handpicked hotels, riverside resorts, and wildlife lodges across India’s most cherished landscapes. With 16+ years of on-ground relationships, we ensure your stay matches your vision.
+             Wild Journey Corbett is a private travel service provider helping guests plan and enjoy their Corbett experience through reliable hotel, tour, and safari booking assistance. We are not affiliated with the Forest Department or Corbett Tiger Reserve.
+
+Based in Delhi, our team of experienced travel professionals assists guests throughout their travel planning and booking process. From choosing the right stay and planning tours to understanding safari booking procedures, we provide clear and timely assistance at every step.
+
+We also help guests understand applicable park rules, regulations, guidelines, and Do’s and Don’ts, so they can travel responsibly and with greater confidence. Whether you are travelling solo, with family, friends, or as part of a group, our goal is to make your Corbett visit comfortable, organized, and memorable.
             </p>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+            {/* <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
               <Link to="/about/" className="atl-btn atl-btn-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                 <span>Discover Our Story</span>
                 <ArrowRight size={16} className="atl-shrink-0" />
@@ -349,7 +357,7 @@ export default function HomePage() {
                 <span>Explore Stays</span>
                 <ChevronRight size={16} />
               </a>
-            </div>
+            </div> */}  
           </div>
 
           {/* Right Column: 3 Interactive Bento Pillar Cards */}
@@ -456,11 +464,11 @@ export default function HomePage() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '32px' }}>
             <div>
               <span className="atl-kicker">Curated Stays</span>
-              <h2 className="atl-section-title">Explore Featured Destinations</h2>
+              <h2 className="atl-section-title">Sightseeing in Corbett</h2>
             </div>
 
             {/* Curated Collection Filter Chips */}
-            <div className="atl-destination-filter-bar" style={{ margin: 0 }}>
+            {/* <div className="atl-destination-filter-bar" style={{ margin: 0 }}>
               <button
                 type="button"
                 className={`atl-filter-chip ${selectedCollection === 'all' ? 'is-active' : ''}`}
@@ -492,7 +500,7 @@ export default function HomePage() {
                 <Mountain size={14} />
                 <span>Himalayan Lakes &amp; Hills</span>
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Bespoke Dynamic Destination Layout: Flagship Spotlight + Quad Grid */}
@@ -500,14 +508,14 @@ export default function HomePage() {
             <div>
               {/* Flagship Destination Spotlight (Jim Corbett) */}
               <div className="atl-spotlight-dest-wrap">
-                <div className="atl-spotlight-media" style={{ position: 'relative', overflow: 'hidden' }}>
+                {/* <div className="atl-spotlight-media" style={{ position: 'relative', overflow: 'hidden' }}>
                   <img
                     src="/images/jim-corbett-atulya.jpg"
                     alt="Jim Corbett National Park"
                   />
-                </div>
+                </div> */}
 
-                <div className="atl-spotlight-body">
+                {/* <div className="atl-spotlight-body">
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginBottom: '12px' }}>
                       <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#c97a1a' }}>
@@ -552,7 +560,7 @@ export default function HomePage() {
                       <ChevronRight size={15} />
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* 4 Companion Destinations Grid */}
@@ -560,10 +568,10 @@ export default function HomePage() {
                 {/* Nainital */}
                 <div className="atl-col-12 atl-md-col-6 atl-lg-col-3">
                   <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                    <Link to="/destinations/nainital/" aria-label="Explore Nainital" className="atl-retreat-card-media" style={{ borderRadius: '22px', overflow: 'hidden', height: '220px' }}>
-                      <img src="/images/nainital-atulya.jpg" alt="Nainital" className="atl-img-cover" style={{ transition: 'transform 0.4s ease' }} />
+                    <Link   aria-label="Explore Nainital" className="atl-retreat-card-media" style={{ borderRadius: '22px', overflow: 'hidden', height: '220px' }}>
+                      <img src="/images/forCorbettWaterfall.jpg" alt="CorbettWaterfal" className="atl-img-cover" style={{ transition: 'transform 0.4s ease' }} />
                       <div className="atl-retreat-card-badge atl-badge" style={{ borderRadius: '9999px', fontSize: '11px', fontWeight: 600 }}>
-                        Uttarakhand
+                        Corbett
                       </div>
                       <div style={{ position: 'absolute', bottom: '10px', left: '10px', background: 'rgba(25, 28, 29, 0.85)', backdropFilter: 'blur(6px)', color: '#ffffff', padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 500 }}>
                         Emerald Lake Views
@@ -571,11 +579,11 @@ export default function HomePage() {
                     </Link>
                     <div className="atl-retreat-card-foot" style={{ marginTop: '12px' }}>
                       <div>
-                        <span style={{ fontSize: '10.5px', fontWeight: 700, textTransform: 'uppercase', color: '#c97a1a' }}>Lakeside Stays</span>
-                        <h3 className="atl-retreat-card-title" style={{ fontSize: '19px', margin: '2px 0 4px' }}>Nainital</h3>
-                        <p className="atl-retreat-card-text" style={{ fontSize: '13px', lineHeight: 1.45 }}>Colonial retreats and hill balconies.</p>
+                        <span style={{ fontSize: '10.5px', fontWeight: 700, textTransform: 'uppercase', color: '#c97a1a' }}>NATURE ESCAPE</span>
+                        <h3 className="atl-retreat-card-title" style={{ fontSize: '19px', margin: '2px 0 4px' }}>CorbettWaterfal</h3>
+                        <p className="atl-retreat-card-text" style={{ fontSize: '13px', lineHeight: 1.45 }}>Scenic cascade surrounded by lush forest.</p>
                       </div>
-                      <Link to="/destinations/nainital/" aria-label="Explore Nainital" className="atl-btn-circle" style={{ flexShrink: 0 }}>
+                      <Link  aria-label="Explore Nainital" className="atl-btn-circle" style={{ flexShrink: 0 }}>
                         <ArrowRight size={16} />
                       </Link>
                     </div>
@@ -585,10 +593,10 @@ export default function HomePage() {
                 {/* Bhimtal */}
                 <div className="atl-col-12 atl-md-col-6 atl-lg-col-3">
                   <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                    <Link to="/destinations/bhimtal/" aria-label="Explore Bhimtal" className="atl-retreat-card-media" style={{ borderRadius: '22px', overflow: 'hidden', height: '220px' }}>
-                      <img src="/images/fba300e0-8988-4170-9e14-3e06ef193c12-2-1.webp" alt="Bhimtal" className="atl-img-cover" style={{ transition: 'transform 0.4s ease' }} />
+                    <Link   aria-label="Explore Bhimtal" className="atl-retreat-card-media" style={{ borderRadius: '22px', overflow: 'hidden', height: '220px' }}>
+                      <img src="/images/forDhangarhiMuseum.jpg" alt="DhangarhiMuseum" className="atl-img-cover" style={{ transition: 'transform 0.4s ease' }} />
                       <div className="atl-retreat-card-badge atl-badge" style={{ borderRadius: '9999px', fontSize: '11px', fontWeight: 600 }}>
-                        Uttarakhand
+                        Corbett
                       </div>
                       <div style={{ position: 'absolute', bottom: '10px', left: '10px', background: 'rgba(25, 28, 29, 0.85)', backdropFilter: 'blur(6px)', color: '#ffffff', padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 500 }}>
                         Island Lake &amp; Kayaking
@@ -596,11 +604,11 @@ export default function HomePage() {
                     </Link>
                     <div className="atl-retreat-card-foot" style={{ marginTop: '12px' }}>
                       <div>
-                        <span style={{ fontSize: '10.5px', fontWeight: 700, textTransform: 'uppercase', color: '#c97a1a' }}>Tranquil Waters</span>
-                        <h3 className="atl-retreat-card-title" style={{ fontSize: '19px', margin: '2px 0 4px' }}>Bhimtal</h3>
-                        <p className="atl-retreat-card-text" style={{ fontSize: '13px', lineHeight: 1.45 }}>Peaceful pine forest and island lake stays.</p>
+                        <span style={{ fontSize: '10.5px', fontWeight: 700, textTransform: 'uppercase', color: '#c97a1a' }}>WILDLIFE HERITAGE</span>
+                        <h3 className="atl-retreat-card-title" style={{ fontSize: '19px', margin: '2px 0 4px' }}>Dhangarhi Museum</h3>
+                        <p className="atl-retreat-card-text" style={{ fontSize: '13px', lineHeight: 1.45 }}>Explore Corbett's wildlife and natural heritage.</p>
                       </div>
-                      <Link to="/destinations/bhimtal/" aria-label="Explore Bhimtal" className="atl-btn-circle" style={{ flexShrink: 0 }}>
+                      <Link   aria-label="Explore Bhimtal" className="atl-btn-circle" style={{ flexShrink: 0 }}>
                         <ArrowRight size={16} />
                       </Link>
                     </div>
@@ -610,10 +618,10 @@ export default function HomePage() {
                 {/* Mukteshwar */}
                 <div className="atl-col-12 atl-md-col-6 atl-lg-col-3">
                   <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                    <Link to="/destinations/mukteshwar/" aria-label="Explore Mukteshwar" className="atl-retreat-card-media" style={{ borderRadius: '22px', overflow: 'hidden', height: '220px' }}>
-                      <img src="/images/Mukteshwar.webp" alt="Mukteshwar" className="atl-img-cover" style={{ transition: 'transform 0.4s ease' }} />
+                    <Link   aria-label="Explore Mukteshwar" className="atl-retreat-card-media" style={{ borderRadius: '22px', overflow: 'hidden', height: '220px' }}>
+                      <img src="/images/forGarjiyaDeviTemple.jpg" alt="GarjiyaDeviTemple" className="atl-img-cover" style={{ transition: 'transform 0.4s ease' }} />
                       <div className="atl-retreat-card-badge atl-badge" style={{ borderRadius: '9999px', fontSize: '11px', fontWeight: 600 }}>
-                        Uttarakhand
+                        Corbett
                       </div>
                       <div style={{ position: 'absolute', bottom: '10px', left: '10px', background: 'rgba(25, 28, 29, 0.85)', backdropFilter: 'blur(6px)', color: '#ffffff', padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 500 }}>
                         Himalayan Sunrise Peaks
@@ -621,11 +629,11 @@ export default function HomePage() {
                     </Link>
                     <div className="atl-retreat-card-foot" style={{ marginTop: '12px' }}>
                       <div>
-                        <span style={{ fontSize: '10.5px', fontWeight: 700, textTransform: 'uppercase', color: '#c97a1a' }}>Mountain Ridge</span>
-                        <h3 className="atl-retreat-card-title" style={{ fontSize: '19px', margin: '2px 0 4px' }}>Mukteshwar</h3>
-                        <p className="atl-retreat-card-text" style={{ fontSize: '13px', lineHeight: 1.45 }}>Orchards and panoramic 360° snow views.</p>
+                        <span style={{ fontSize: '10.5px', fontWeight: 700, textTransform: 'uppercase', color: '#c97a1a' }}>SPIRITUAL LANDMARK</span>
+                        <h3 className="atl-retreat-card-title" style={{ fontSize: '19px', margin: '2px 0 4px' }}>Garjiya Devi Temple</h3>
+                        <p className="atl-retreat-card-text" style={{ fontSize: '13px', lineHeight: 1.45 }}>Sacred riverside temple on the Kosi River.</p>
                       </div>
-                      <Link to="/destinations/mukteshwar/" aria-label="Explore Mukteshwar" className="atl-btn-circle" style={{ flexShrink: 0 }}>
+                      <Link  aria-label="Explore Mukteshwar" className="atl-btn-circle" style={{ flexShrink: 0 }}>
                         <ArrowRight size={16} />
                       </Link>
                     </div>
@@ -635,10 +643,10 @@ export default function HomePage() {
                 {/* Ranthambore */}
                 <div className="atl-col-12 atl-md-col-6 atl-lg-col-3">
                   <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                    <Link to="/destinations/ranthambore/" aria-label="Explore Ranthambore" className="atl-retreat-card-media" style={{ borderRadius: '22px', overflow: 'hidden', height: '220px' }}>
-                      <img src="/images/ranthambore-atulya.jpg" alt="Ranthambore" className="atl-img-cover" style={{ transition: 'transform 0.4s ease' }} />
+                    <Link   aria-label="Explore Ranthambore" className="atl-retreat-card-media" style={{ borderRadius: '22px', overflow: 'hidden', height: '220px' }}>
+                      <img src="/images/forCorbettMuseum.jpg" alt="CorbettMuseum" className="atl-img-cover" style={{ transition: 'transform 0.4s ease' }} />
                       <div className="atl-retreat-card-badge atl-badge" style={{ borderRadius: '9999px', fontSize: '11px', fontWeight: 600 }}>
-                        Rajasthan
+                        Kaladhungi
                       </div>
                       <div style={{ position: 'absolute', bottom: '10px', left: '10px', background: 'rgba(25, 28, 29, 0.85)', backdropFilter: 'blur(6px)', color: '#ffffff', padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 500 }}>
                         Royal Fort &amp; Tigers
@@ -646,11 +654,11 @@ export default function HomePage() {
                     </Link>
                     <div className="atl-retreat-card-foot" style={{ marginTop: '12px' }}>
                       <div>
-                        <span style={{ fontSize: '10.5px', fontWeight: 700, textTransform: 'uppercase', color: '#c97a1a' }}>Heritage Safari</span>
-                        <h3 className="atl-retreat-card-title" style={{ fontSize: '19px', margin: '2px 0 4px' }}>Ranthambore</h3>
-                        <p className="atl-retreat-card-text" style={{ fontSize: '13px', lineHeight: 1.45 }}>Royal tiger safaris &amp; heritage palaces.</p>
+                        <span style={{ fontSize: '10.5px', fontWeight: 700, textTransform: 'uppercase', color: '#c97a1a' }}>CORBETT HERITAGE</span>
+                        <h3 className="atl-retreat-card-title" style={{ fontSize: '19px', margin: '2px 0 4px' }}>Corbett Museum</h3>
+                        <p className="atl-retreat-card-text" style={{ fontSize: '13px', lineHeight: 1.45 }}>Discover the legacy of Jim Corbett.</p>
                       </div>
-                      <Link to="/destinations/ranthambore/" aria-label="Explore Ranthambore" className="atl-btn-circle" style={{ flexShrink: 0 }}>
+                      <Link   aria-label="Explore Ranthambore" className="atl-btn-circle" style={{ flexShrink: 0 }}>
                         <ArrowRight size={16} />
                       </Link>
                     </div>
@@ -920,7 +928,7 @@ export default function HomePage() {
         </section>
 
         {/* 6. Why Choose Us / Why Travelers Choose Our Retreats (Interactive Strip + Dual Badges) */}
-        <section className="atl-container atl-grid atl-gap-10 atl-items-center" style={{ paddingBottom: '60px' }}>
+        {/* <section className="atl-container atl-grid atl-gap-10 atl-items-center" style={{ paddingBottom: '60px' }}>
           <div className="atl-col-12 atl-lg-col-6">
             <span className="atl-kicker">✦ Why Choose Us</span>
             <div style={{ margin: '8px 0 28px' }}>
@@ -936,7 +944,7 @@ export default function HomePage() {
                     Curated Hotel &amp; Resort Selection
                   </h4>
                   <p className="atl-why-text" style={{ fontSize: '14px', lineHeight: 1.6, margin: 0, color: 'var(--atl-ink-700)' }}>
-                    Atulya Hospitality carefully selects premium hotels, riverside cottages, and wildlife lodges to ensure exceptional comfort, verified hygiene, and scenic beauty.
+                    GTI Travels Pvt. Ltd. carefully selects premium hotels, riverside cottages, and wildlife lodges to ensure exceptional comfort, verified hygiene, and scenic beauty.
                   </p>
                 </div>
               </div>
@@ -980,7 +988,7 @@ export default function HomePage() {
             />
 
             {/* Floating Trust Badge 1: Top Right */}
-            <div style={{
+        {/* <div style={{
               position: 'absolute',
               top: '18px',
               right: '18px',
@@ -997,10 +1005,10 @@ export default function HomePage() {
             }}>
               <span className="atl-pulse-dot" />
               <span style={{ fontSize: '12px', fontWeight: 600 }}>100% Forest Dept Registered</span>
-            </div>
+            </div> */}
 
-            {/* Overlaid Floating Trust Card: Bottom Left */}
-            <div className="atl-floating-trust-badge" style={{ bottom: '20px', left: '20px' }}>
+        {/* Overlaid Floating Trust Card: Bottom Left */}
+        {/* <div className="atl-floating-trust-badge" style={{ bottom: '20px', left: '20px' }}>
               <div style={{
                 background: '#3a2b14', color: '#ffffff',
                 borderRadius: '12px',
@@ -1025,12 +1033,12 @@ export default function HomePage() {
                   100% Handpicked Indian Stays
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </div> */}
+        {/* </div> */}
+        {/* </section> */}
 
         {/* 7. 20% Bespoke Feature: Safari Zones Insider Exploration Strip */}
-        <section className="atl-container" style={{ paddingBottom: '60px' }}>
+        {/* <section className="atl-container" style={{ paddingBottom: '60px' }}>
           <div className="atl-text-center" style={{ marginBottom: '40px' }}>
             <span className="atl-kicker">✦ Sanctuary Insider</span>
             <h2 className="atl-section-title" style={{ margin: '8px 0 10px' }}>
@@ -1039,9 +1047,9 @@ export default function HomePage() {
             <p style={{ maxWidth: '580px', margin: '0 auto', color: 'var(--atl-ink-700)', fontSize: '15px' }}>
               Choose the right safari zone for your dates, wildlife interests, and resort location with our insider guide.
             </p>
-          </div>
+          </div> */}
 
-          <div className="atl-grid atl-gap-6">
+        {/* <div className="atl-grid atl-gap-6">
             <div className="atl-col-12 atl-md-col-6 atl-lg-col-3 atl-safari-zone-card">
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
@@ -1118,7 +1126,7 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* 8. Regards from Travelers (Testimonials Carousel with Rating Header) */}
         <section id="testimonials" className="atl-bg-cream-100" style={{ background: 'var(--atl-cream-pill)', padding: '56px 0' }}>
@@ -1162,7 +1170,7 @@ export default function HomePage() {
               Have specific travel dates or a custom group requirement?
             </span>
             <a
-              href="https://wa.me/919315517530?text=Hello%20Atulya%20Hospitality,%20I%20have%20a%20question%20about%20booking%20a%20stay."
+              href="https://wa.me/919717327225?text=Hello%20GTI%20Travels%20Pvt.%20Ltd.,%20I%20have%20a%20question%20about%20booking%20a%20stay."
               target="_blank"
               rel="noopener noreferrer"
               className="atl-btn atl-btn-dark atl-btn-sm"
@@ -1175,9 +1183,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 10. News & Articles From Atulya Hospitality (Editorial Dual Showcase) */}
-        <section className="atl-container atl-grid atl-gap-10" style={{ paddingBottom: '64px', alignItems: 'center' }}>
-          <div className="atl-col-12 atl-lg-col-4">
+        {/* 10. News & Articles From GTI Travels Pvt. Ltd. (Editorial Dual Showcase) */}
+        {/* <section className="atl-container atl-grid atl-gap-10" style={{ paddingBottom: '64px', alignItems: 'center' }}> */}
+        {/* <div className="atl-col-12 atl-lg-col-4">
             <span className="atl-kicker">✦ Blog &amp; Stories</span>
             <h2 className="atl-section-title" style={{ margin: '10px 0 16px', lineHeight: 1.2 }}>
               News &amp; Articles From Atulya
@@ -1265,8 +1273,8 @@ export default function HomePage() {
                 </span>
               </Link>
             </div>
-          </div>
-        </section>
+          </div> */}
+        {/* </section> */}
       </main>
 
       {/* Footer Component (includes 'Plan Your Next Stay' CTA banner + Complete Footer Links) */}

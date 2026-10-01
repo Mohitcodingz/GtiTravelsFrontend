@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Calendar, Clock, Users, ShieldCheck, CheckCircle2, MessageCircle, AlertCircle } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -25,7 +25,7 @@ export default function SafariBookingPage() {
   };
 
   const whatsappInquiry = encodeURIComponent(
-    `Hello Atulya Hospitality,\nI want to book Jim Corbett Safari:\n` +
+    `Hello GTI Travels Pvt. Ltd.,\nI want to book Jim Corbett Safari:\n` +
     // `• Zone: ${zone}\n` +
     `• Shift: ${shift}\n` +
     `• Date: ${date || 'Flexible'}\n` +
@@ -271,7 +271,7 @@ export default function SafariBookingPage() {
                     Our forest permit desk will contact you to collect traveler IDs and confirm your slot.
                   </p>
                   <a
-                    href={`https://wa.me/919315517530?text=${whatsappInquiry}`}
+                    href={`https://wa.me/919717327225?text=${whatsappInquiry}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="atl-btn atl-btn-whatsapp atl-btn-block"
@@ -411,7 +411,7 @@ export default function SafariBookingPage() {
                   </button>
 
                   <a
-                    href={`https://wa.me/919315517530?text=${whatsappInquiry}`}
+                    href={`https://wa.me/919717327225?text=${whatsappInquiry}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="atl-btn atl-btn-whatsapp atl-btn-block"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
 import DestinationsPage from './pages/DestinationsPage';
@@ -15,13 +15,24 @@ import ContactPage from './pages/ContactPage';
 import PaymentDetailsPage from './pages/PaymentDetailsPage';
 import BlogPage from './pages/BlogPage';
 import LegalPage from './pages/LegalPage';
+import HotelDashboardPage from './pages/HotelDashboardPage';
 import MobileStickyBar from './components/MobileStickyBar';
 
 export default function App() {
+  const { pathname } = useLocation();
+
   return (
     <>
       <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route
+        path="/admin/"
+        element={import.meta.env.DEV ? <HotelDashboardPage /> : <Navigate to="/" replace />}
+      />
+      <Route
+        path="/admin"
+        element={import.meta.env.DEV ? <HotelDashboardPage /> : <Navigate to="/" replace />}
+      />
 
       {/* Destinations */}
       <Route path="/destinations/" element={<DestinationsPage />} />
@@ -162,7 +173,7 @@ export default function App() {
       {/* Fallback */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
-    <MobileStickyBar />
+    {!pathname.startsWith('/admin') && <MobileStickyBar />}
     </>
   );
 }
