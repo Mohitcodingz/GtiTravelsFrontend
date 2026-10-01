@@ -6,11 +6,13 @@ import Footer from '../components/Footer';
 import DatePicker, { formatDateValue, shiftDateValue } from '../components/DatePicker';
 import hotelsData from '../data/hotels.json';
 import { getDefaultMealPlan, getMealPlanRates, mealPlanOptions } from '../utils/mealPlans';
+import { applyHotelDetailData } from '../utils/hotelDetails';
 
 
 export default function HotelDetailPage() {
   const { slug } = useParams();
-  const fallbackHotel = hotelsData.find((h) => h.slug === slug);
+  const baseHotel = hotelsData.find((h) => h.slug === slug);
+  const fallbackHotel = baseHotel ? applyHotelDetailData(baseHotel) : undefined;
   const [hotel, setHotel] = useState(fallbackHotel);
 
   // Lightbox state
@@ -41,41 +43,33 @@ export default function HotelDetailPage() {
 
   useEffect(() => {
     setHotel(fallbackHotel);
-    if (!slug) return undefined;
+    if (!import.meta.env.DEV || !slug) return undefined;
 
     let isCurrent = true;
-    let timeoutId;
-
-    const refreshHotel = async () => {
-      try {
-        const response = await fetch(`/api/hotels/${encodeURIComponent(slug)}`, {
-          cache: 'no-store'
-        });
+    fetch(`/api/hotels/${encodeURIComponent(slug)}`)
+      .then(async (response) => {
         if (!response.ok) {
           throw new Error(`Could not load hotel data (${response.status}).`);
         }
-        const data = await response.json();
+        return response.json();
+      })
+      .then((data) => {
         if (isCurrent) setHotel(data);
-      } catch (error) {
+      })
+      .catch((error) => {
         console.error('Could not load hotel data:', error);
-      } finally {
-        if (isCurrent) {
-          timeoutId = window.setTimeout(refreshHotel, 10000);
-        }
-      }
-    };
-
-    refreshHotel();
+      });
 
     return () => {
       isCurrent = false;
-      window.clearTimeout(timeoutId);
     };
   }, [fallbackHotel, slug]);
 
   useEffect(() => {
-    if (hotel) setSelectedMealPlan(getDefaultMealPlan(mealPlanRates));
-  }, [hotel?.slug, mealPlanRates.CP, mealPlanRates.MAP, mealPlanRates.AP]);
+    if (hotel) {
+      setSelectedMealPlan(getDefaultMealPlan(getMealPlanRates(hotel)));
+    }
+  }, [hotel]);
 
   if (!hotel) {
     return <Navigate to="/hotels/" replace />;

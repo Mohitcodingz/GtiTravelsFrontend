@@ -8,10 +8,6 @@ export default function HotelDashboardPage() {
   const [mealPlanRates, setMealPlanRates] = useState({});
   const [status, setStatus] = useState('Loading hotel data…');
   const [saving, setSaving] = useState(false);
-  const [adminPassword, setAdminPassword] = useState(
-    import.meta.env.DEV ? '' : sessionStorage.getItem('hotelAdminPassword') || ''
-  );
-  const isDashboardAuthenticated = import.meta.env.DEV || Boolean(adminPassword);
 
   useEffect(() => {
     let isCurrent = true;
@@ -48,11 +44,6 @@ export default function HotelDashboardPage() {
 
   const saveHotel = async (event) => {
     event.preventDefault();
-    if (!isDashboardAuthenticated) {
-      setStatus('Enter the dashboard password before saving.');
-      return;
-    }
-
     let updatedHotel;
 
     try {
@@ -89,18 +80,11 @@ export default function HotelDashboardPage() {
     try {
       const response = await fetch(`/api/hotels/${encodeURIComponent(selectedSlug)}`, {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          ...(import.meta.env.DEV ? {} : { 'x-admin-password': adminPassword })
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedHotel)
       });
       const result = await response.json();
       if (!response.ok) {
-        if (response.status === 401) {
-          sessionStorage.removeItem('hotelAdminPassword');
-          setAdminPassword('');
-        }
         throw new Error(result.error || `Could not save hotel (${response.status}).`);
       }
 
@@ -108,7 +92,7 @@ export default function HotelDashboardPage() {
         currentHotels.map((hotel) => (hotel.slug === selectedSlug ? result : hotel))
       );
       setHotelJson(JSON.stringify(result, null, 2));
-      setStatus('Saved. Open hotel detail pages will refresh the updated data automatically.');
+      setStatus('Saved to the local hotel data file. Refresh the hotel detail page to see changes.');
     } catch (error) {
       setStatus(error.message);
     } finally {
@@ -121,29 +105,9 @@ export default function HotelDashboardPage() {
       <h1>Hotel detail data</h1>
       <p>
         Select a property and edit its detail-page content and meal-plan rates.
-        Changes update that hotel&apos;s detail page; hotel listing cards are
-        intentionally unchanged.
+        Changes are saved in <code>src/data/hotelDetailData.json</code>, separate
+        from the hotel listing data.
       </p>
-
-      {!import.meta.env.DEV && (
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
-            sessionStorage.setItem('hotelAdminPassword', adminPassword);
-            setStatus('Dashboard password set for this browser session.');
-          }}
-        >
-          <label htmlFor="hotel-admin-password">Dashboard password</label>{' '}
-          <input
-            id="hotel-admin-password"
-            type="password"
-            value={adminPassword}
-            onChange={(event) => setAdminPassword(event.target.value)}
-            autoComplete="current-password"
-          />{' '}
-          <button type="submit">Use password</button>
-        </form>
-      )}
 
       <label htmlFor="hotel-select">Hotel</label>{' '}
       <select
@@ -167,7 +131,7 @@ export default function HotelDashboardPage() {
         </p>
       )}
 
-      <fieldset disabled={!selectedHotel || saving || !isDashboardAuthenticated}>
+      <fieldset disabled={!selectedHotel || saving}>
         <legend>Meal-plan rates per night (enter 0 to disable a button)</legend>
         {mealPlanOptions.map(({ code, name, label }) => (
           <div key={code}>
@@ -202,13 +166,10 @@ export default function HotelDashboardPage() {
           value={hotelJson}
           onChange={(event) => setHotelJson(event.target.value)}
           spellCheck="false"
-          disabled={!selectedHotel || saving || !isDashboardAuthenticated}
+          disabled={!selectedHotel || saving}
         />
         <br />
-        <button
-          type="submit"
-          disabled={!selectedHotel || saving || !isDashboardAuthenticated}
-        >
+        <button type="submit" disabled={!selectedHotel || saving}>
           {saving ? 'Saving…' : 'Save changes'}
         </button>
       </form>
@@ -216,8 +177,8 @@ export default function HotelDashboardPage() {
       <p role="status">{status}</p>
       <p>
         Run <code>npm run dev</code> and open <code>http://localhost:3000/admin/</code>.
-        Dashboard changes update individual hotel detail pages; hotel listing cards
-        remain unchanged.
+        Edit the same per-hotel values in <code>src/data/hotelDetailData.json</code>
+        or use this dashboard. Rebuild and redeploy to publish changes.
       </p>
     </main>
   );

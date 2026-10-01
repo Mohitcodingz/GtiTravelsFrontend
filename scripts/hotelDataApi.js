@@ -1,12 +1,12 @@
-import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
+import { readFile, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const hotelsFile = fileURLToPath(
   new URL('../src/data/hotels.json', import.meta.url)
 );
-const localHotelsFile = fileURLToPath(
-  new URL('../.hotel-data/hotels.json', import.meta.url)
+const hotelDetailsFile = fileURLToPath(
+  new URL('../src/data/hotelDetailData.json', import.meta.url)
 );
 const hotelRoute = /^\/api\/hotels\/([^/]+)$/;
 const maxRequestSize = 2 * 1024 * 1024;
@@ -18,13 +18,22 @@ function sendJson(response, status, data) {
 }
 
 async function readHotels() {
-  let contents;
-  try {
-    contents = await readFile(localHotelsFile, 'utf8');
-  } catch (error) {
-    if (error.code !== 'ENOENT') throw error;
-    contents = await readFile(hotelsFile, 'utf8');
-  }
+  const contents = await readFile(hotelsFile, 'utf8');
+  const detailsContents = await readFile(hotelDetailsFile, 'utf8');
+  const detailOverrides = JSON.parse(detailsContents.replace(/^\uFEFF/, ''));
+  return JSON.parse(contents.replace(/^\uFEFF/, '')).map((hotel) => ({
+    ...hotel,
+    ...detailOverrides[hotel.slug]
+  }));
+}
+
+async function readBaseHotels() {
+  const contents = await readFile(hotelsFile, 'utf8');
+  return JSON.parse(contents.replace(/^\uFEFF/, ''));
+}
+
+async function readHotelOverrides() {
+  const contents = await readFile(hotelDetailsFile, 'utf8');
   return JSON.parse(contents.replace(/^\uFEFF/, ''));
 }
 
@@ -139,14 +148,37 @@ async function handleHotelApi(request, response, next) {
       }
     }
 
-    hotels[hotelIndex] = updatedHotel;
-    await mkdir(path.dirname(localHotelsFile), { recursive: true });
+    const baseHotels = await readBaseHotels();
+    const baseHotel = baseHotels.find((hotel) => hotel.slug === slug);
+    const detailOverrides = await readHotelOverrides();
+    const overrides = { ...detailOverrides[slug] };
+
+    for (const field of new Set([
+      ...Object.keys(baseHotel),
+      ...Object.keys(updatedHotel)
+    ])) {
+      if (field === 'slug') continue;
+      if (!(field in updatedHotel)) {
+        overrides[field] = null;
+      } else if (JSON.stringify(baseHotel[field]) === JSON.stringify(updatedHotel[field])) {
+        delete overrides[field];
+      } else {
+        overrides[field] = updatedHotel[field];
+      }
+    }
+
+    if (Object.keys(overrides).length) {
+      detailOverrides[slug] = overrides;
+    } else {
+      delete detailOverrides[slug];
+    }
+
     const temporaryFile = path.join(
-      path.dirname(localHotelsFile),
-      `hotels.${process.pid}.${Date.now()}.tmp`
+      path.dirname(hotelDetailsFile),
+      `hotelDetails.${process.pid}.${Date.now()}.tmp`
     );
-    await writeFile(temporaryFile, `${JSON.stringify(hotels, null, 2)}\n`, 'utf8');
-    await rename(temporaryFile, hotelsFile);
+    await writeFile(temporaryFile, `${JSON.stringify(detailOverrides, null, 2)}\n`, 'utf8');
+    await rename(temporaryFile, hotelDetailsFile);
     sendJson(response, 200, updatedHotel);
   } catch (error) {
     if (error.statusCode) {

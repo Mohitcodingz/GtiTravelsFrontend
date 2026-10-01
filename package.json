@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "seed:hotels": "node scripts/seedHotelDatabase.js",
     "zip": "powershell -ExecutionPolicy Bypass -File make_zip.ps1",
     "build:zip": "vite build && powershell -ExecutionPolicy Bypass -File make_zip.ps1",
     "preview": "vite preview"

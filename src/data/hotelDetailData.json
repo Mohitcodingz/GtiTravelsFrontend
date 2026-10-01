@@ -1,0 +1,17 @@
+{
+  "aahana-resort": {
+    "mealPlanRates": {
+      "CP": 1,
+      "MAP": 18719,
+      "AP": 22229
+    }
+  },
+  "aamaghati-wildlife-resort": {
+    "title": "Aamaghati Wildlife Resort10",
+    "mealPlanRates": {
+      "CP": 0,
+      "MAP": 18719,
+      "AP": 22229
+    }
+  }
+}

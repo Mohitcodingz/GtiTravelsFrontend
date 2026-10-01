@@ -27,11 +27,11 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route
         path="/admin/"
-        element={<HotelDashboardPage />}
+        element={import.meta.env.DEV ? <HotelDashboardPage /> : <Navigate to="/" replace />}
       />
       <Route
         path="/admin"
-        element={<HotelDashboardPage />}
+        element={import.meta.env.DEV ? <HotelDashboardPage /> : <Navigate to="/" replace />}
       />
 
       {/* Destinations */}
