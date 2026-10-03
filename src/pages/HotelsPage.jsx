@@ -7,15 +7,15 @@ import Footer from '../components/Footer';
 
 const corbettResorts = [
   {
-    slug: 'corbett-view-resort',
-    title: 'Corbett View Resort',
-    starRating: '3',
-    ratingLabel: '3-Star',
-    starCount: 3,
-    price: '₹3,699',
+    slug: 'aamaghati-wildlife-resort',
+    title: 'Aamaghati Wildlife Resort',
+    starRating: '5',
+    ratingLabel: '5-Star',
+    starCount: 5,
+    price: '₹18,719',
     priceUnit: '/night',
-    image: '/images/Untitled5.webp',
-    description: 'Nature resort in Dhela Village, offering rooms and cottages amid forest surroundings with convenient access to Dhela and Jhirna safari gates.'
+    image: '/images/Overview.webp',
+    description: 'A wildlife resort in Ranthambore, designed in harmony with nature and close to the national park.'
   },
   {
     slug: 'the-jungle-book-corbett',

@@ -11,7 +11,11 @@ export default function HotelListingPage({ destinationName, title, subtitle, isR
   const [searchQuery, setSearchQuery] = useState('');
 
   const hotels = useMemo(() => {
+    const seenSlugs = new Set();
     return hotelsData.filter((h) => {
+      if (seenSlugs.has(h.slug)) return false;
+      seenSlugs.add(h.slug);
+
       let matchDest = true;
       if (isRiverside) {
         matchDest = h.destination.toLowerCase() === 'jim corbett' && (h.isRiverside || h.title.toLowerCase().includes('river'));

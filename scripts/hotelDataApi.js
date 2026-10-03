@@ -2,9 +2,6 @@ import { readFile, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const hotelsFile = fileURLToPath(
-  new URL('../src/data/hotels.json', import.meta.url)
-);
 const hotelDetailsFile = fileURLToPath(
   new URL('../src/data/hotelDetailData.json', import.meta.url)
 );
@@ -18,21 +15,6 @@ function sendJson(response, status, data) {
 }
 
 async function readHotels() {
-  const contents = await readFile(hotelsFile, 'utf8');
-  const detailsContents = await readFile(hotelDetailsFile, 'utf8');
-  const detailOverrides = JSON.parse(detailsContents.replace(/^\uFEFF/, ''));
-  return JSON.parse(contents.replace(/^\uFEFF/, '')).map((hotel) => ({
-    ...hotel,
-    ...detailOverrides[hotel.slug]
-  }));
-}
-
-async function readBaseHotels() {
-  const contents = await readFile(hotelsFile, 'utf8');
-  return JSON.parse(contents.replace(/^\uFEFF/, ''));
-}
-
-async function readHotelOverrides() {
   const contents = await readFile(hotelDetailsFile, 'utf8');
   return JSON.parse(contents.replace(/^\uFEFF/, ''));
 }
@@ -79,7 +61,7 @@ async function handleHotelApi(request, response, next) {
 
   try {
     if (request.method === 'GET' && pathname === '/api/hotels') {
-      sendJson(response, 200, await readHotels());
+      sendJson(response, 200, Object.values(await readHotels()));
       return;
     }
 
@@ -91,14 +73,13 @@ async function handleHotelApi(request, response, next) {
 
     const slug = decodeURIComponent(match[1]);
     const hotels = await readHotels();
-    const hotelIndex = hotels.findIndex((hotel) => hotel.slug === slug);
-    if (hotelIndex === -1) {
+    if (!hotels[slug]) {
       sendJson(response, 404, { error: 'Hotel not found.' });
       return;
     }
 
     if (request.method === 'GET') {
-      sendJson(response, 200, hotels[hotelIndex]);
+      sendJson(response, 200, hotels[slug]);
       return;
     }
 
@@ -148,36 +129,13 @@ async function handleHotelApi(request, response, next) {
       }
     }
 
-    const baseHotels = await readBaseHotels();
-    const baseHotel = baseHotels.find((hotel) => hotel.slug === slug);
-    const detailOverrides = await readHotelOverrides();
-    const overrides = { ...detailOverrides[slug] };
-
-    for (const field of new Set([
-      ...Object.keys(baseHotel),
-      ...Object.keys(updatedHotel)
-    ])) {
-      if (field === 'slug') continue;
-      if (!(field in updatedHotel)) {
-        overrides[field] = null;
-      } else if (JSON.stringify(baseHotel[field]) === JSON.stringify(updatedHotel[field])) {
-        delete overrides[field];
-      } else {
-        overrides[field] = updatedHotel[field];
-      }
-    }
-
-    if (Object.keys(overrides).length) {
-      detailOverrides[slug] = overrides;
-    } else {
-      delete detailOverrides[slug];
-    }
+    hotels[slug] = updatedHotel;
 
     const temporaryFile = path.join(
       path.dirname(hotelDetailsFile),
       `hotelDetails.${process.pid}.${Date.now()}.tmp`
     );
-    await writeFile(temporaryFile, `${JSON.stringify(detailOverrides, null, 2)}\n`, 'utf8');
+    await writeFile(temporaryFile, `${JSON.stringify(hotels, null, 2)}\n`, 'utf8');
     await rename(temporaryFile, hotelDetailsFile);
     sendJson(response, 200, updatedHotel);
   } catch (error) {

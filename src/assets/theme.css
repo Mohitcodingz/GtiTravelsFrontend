@@ -3097,53 +3097,13 @@ textarea.atl-input-fill {
   color: #fff;
 }
 
-.atl-room-slide-text {
-  color: rgba(255, 255, 255, .8);
-  font-size: 13px;
-  line-height: 1.5;
-  margin: 0 0 12px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.atl-room-slide-facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 11px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, .75);
-  margin-bottom: 12px;
-}
-
-.atl-room-slide-fact {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
 .atl-room-slide-foot {
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, .25);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 8px;
-}
-
-.atl-room-slide-price {
-  color: var(--atl-gold-light);
-  font-weight: 700;
-  font-size: 19px;
-  font-family: var(--atl-font-display);
-}
-
-.atl-room-slide-price-unit {
-  color: rgba(255, 255, 255, .75);
-  font-size: 12px;
-  margin-left: 4px;
 }
 
 .atl-room-slide-actions {
@@ -3158,28 +3118,22 @@ textarea.atl-input-fill {
   height: 34px;
 }
 
-/* Cards-per-view modifiers — card width becomes a fraction of the track
-   instead of a fixed 300px, so N cards fit exactly in one view. Track stays
-   flex + overflow-x:auto, so it's still a slider, just fewer cards per view. */
-/* The N-per-row sizing is a desktop layout choice — on mobile every room
-   list stays the fixed-width horizontal slider (.atl-room-slide's own
-   300px), same as the "more than 3 rooms" case, regardless of room count.
-   Dividing the narrow viewport into 2 or 3 columns produced cards too
-   small to hold the title/facts/price without overlapping. */
+/* Keep the swipeable room slider on mobile; show every room in a desktop grid. */
 @media (min-width: 768px) {
-  .atl-room-slide-track-3 .atl-room-slide {
-    width: auto;
-    flex: 0 0 calc((100% - 48px) / 3);
+  .atl-room-slide-track {
+    display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    overflow: visible;
+    scroll-snap-type: none;
   }
 
-  .atl-room-slide-track-2 .atl-room-slide {
-    width: auto;
-    flex: 0 0 calc((100% - 24px) / 2);
+  .atl-room-slide {
+    width: 100%;
+    min-width: 0;
+    max-height: none;
+    aspect-ratio: 3 / 4;
   }
 
-  /* Room count fits the desktop grid exactly with no overflow, so the nav
-     buttons (kept in the markup for mobile, where cards are fixed-width and
-     always need a way to reach the rest) aren't needed here. */
   .atl-room-nav-desktop-hide {
     display: none;
   }

@@ -4,15 +4,13 @@ import { Sparkles, ArrowRight, ShieldCheck, MessageCircle, Camera } from 'lucide
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DatePicker, { formatDateValue, shiftDateValue } from '../components/DatePicker';
-import hotelsData from '../data/hotels.json';
+import hotelDetailData from '../data/hotelDetailData.json';
 import { getDefaultMealPlan, getMealPlanRates, mealPlanOptions } from '../utils/mealPlans';
-import { applyHotelDetailData } from '../utils/hotelDetails';
 
 
 export default function HotelDetailPage() {
   const { slug } = useParams();
-  const baseHotel = hotelsData.find((h) => h.slug === slug);
-  const fallbackHotel = baseHotel ? applyHotelDetailData(baseHotel) : undefined;
+  const fallbackHotel = hotelDetailData[slug];
   const [hotel, setHotel] = useState(fallbackHotel);
 
   // Lightbox state
@@ -75,7 +73,15 @@ export default function HotelDetailPage() {
     return <Navigate to="/hotels/" replace />;
   }
 
-  const gallery = hotel.gallery && hotel.gallery.length > 0 ? hotel.gallery : [hotel.heroImage];
+  if (slug === 'corbett-view-resort') {
+    return <Navigate to="/hotel/aamaghati-wildlife-resort/" replace />;
+  }
+
+  const heroImages = Array.isArray(hotel.heroImage)
+    ? hotel.heroImage
+    : [hotel.heroImage].filter(Boolean);
+  const heroImage = heroImages[0];
+  const gallery = hotel.gallery && hotel.gallery.length > 0 ? hotel.gallery : heroImages;
 
   const toggleReview = (idx) => {
     setExpandedReviews((prev) => ({ ...prev, [idx]: !prev[idx] }));
@@ -214,7 +220,7 @@ export default function HotelDetailPage() {
           onClick={() => setLightboxOpen(false)}
         >
           <img
-            src={gallery[lightboxIndex] || hotel.heroImage}
+            src={gallery[lightboxIndex] || heroImage}
             alt={`${hotel.title} preview`}
             onClick={(e) => e.stopPropagation()}
           />
@@ -695,7 +701,7 @@ export default function HotelDetailPage() {
                         textTransform: 'uppercase'
                       }}
                     >
-                      Atulya Concierge Perks
+                      GTI TRAVELS PVT LTD Concierge Perks
                     </span>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', margin: '10px 0' }}>
@@ -743,103 +749,19 @@ export default function HotelDetailPage() {
                   Rooms &amp; Suites
                 </h3>
               </div>
-              <div
-                className={`atl-room-slide-track ${
-                  hotel.rooms.length === 2
-                    ? 'atl-room-slide-track-2'
-                    : 'atl-room-slide-track-3'
-                }`}
-              >
+              <div className="atl-room-slide-track">
                 {hotel.rooms.map((room, idx) => (
                   <div key={idx} className="atl-room-slide">
                     <div className="atl-room-slide-media">
                       <img
-                        src={room.image || hotel.heroImage}
+                        src={room.image || heroImage}
                         alt={room.name}
                         className="atl-img-cover"
                       />
                     </div>
                     <div className="atl-room-slide-body">
                       <h4 className="atl-room-slide-title">{room.name}</h4>
-                      {room.description && (
-                        <p className="atl-room-slide-text">
-                          {room.description}
-                        </p>
-                      )}
-                      {room.facts && room.facts.length > 0 && (
-                        <div className="atl-room-slide-facts">
-                          {room.facts.map((fact, fIdx) => (
-                            <span key={fIdx} className="atl-room-slide-fact">
-                              {fIdx === 0 && (
-                                <svg
-                                  width="14"
-                                  height="14"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="2"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  className="atl-shrink-0"
-                                >
-                                  <circle cx="12" cy="8" r="4" />
-                                  <path d="M4 21c0-4 4-6 8-6s8 2 8 6" />
-                                </svg>
-                              )}
-                              {fIdx === 1 && (
-                                <svg
-                                  width="14"
-                                  height="14"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="2"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  className="atl-shrink-0"
-                                >
-                                  <path d="M2 18v-7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v7" />
-                                  <path d="M2 18h20" />
-                                  <path d="M6 11V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4" />
-                                </svg>
-                              )}
-                              {fIdx === 2 && (
-                                <svg
-                                  width="14"
-                                  height="14"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="2"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  className="atl-shrink-0"
-                                >
-                                  <rect
-                                    x="2"
-                                    y="8"
-                                    width="20"
-                                    height="8"
-                                    rx="1"
-                                  />
-                                  <path d="M6 8v4M10 8v4M14 8v4M18 8v4" />
-                                </svg>
-                              )}
-                              {fact}
-                            </span>
-                          ))}
-                        </div>
-                      )}
                       <div className="atl-room-slide-foot">
-                        <div>
-                          <span className="atl-room-slide-price">
-                            {room.priceStr ||
-                              `₹${room.rate.toLocaleString('en-IN')}`}
-                          </span>
-                          <span className="atl-room-slide-price-unit">
-                            per night
-                          </span>
-                        </div>
                         <div className="atl-room-slide-actions">
                           <a
                             href="tel:+919717327225"

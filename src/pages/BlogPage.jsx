@@ -10,7 +10,7 @@ export default function BlogPage() {
       slug: 'riverside-resorts-in-jim-corbett',
       title: 'Riverside Resorts in Jim Corbett: Top Handpicked Stays by the Kosi River',
       date: 'September 19, 2026',
-      author: 'Atulya Editorial Desk',
+      author: 'GTI TRAVELS PVT LTD Editorial Desk',
       image: '/images/home_hero_image_1.webp',
       excerpt: 'Discover why listening to the gentle murmur of the Kosi river while sitting in your private balcony is the ultimate wilderness luxury. Here are our top handpicked riverside lodges in Jim Corbett.'
     },
@@ -54,7 +54,7 @@ export default function BlogPage() {
               <span className="atl-breadcrumb-current">Blog</span>
             </nav>
             <span className="atl-kicker-caps">Blog</span>
-            <h1 className="atl-page-title-heading" style={{ margin: '8px auto 12px' }}>News &amp; Articles From Atulya</h1>
+            <h1 className="atl-page-title-heading" style={{ margin: '8px auto 12px' }}>News &amp; Articles From GTI TRAVELS PVT LTD</h1>
             <p className="atl-page-title-text" style={{ margin: '0 auto', maxWidth: '640px' }}>
               Real stories from travelers, and notes from our team, on the magic of heritage travel.
             </p>

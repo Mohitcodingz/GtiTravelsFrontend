@@ -12,7 +12,7 @@ We have replicated `https://atulyahospitality.com/resorts-in-jim-corbett/` onto 
   - **Category Kicker**: `Stay Options`.
   - **Page Heading (H1)**: `Resorts in Jim Corbett`.
   - **Intro Description**:
-    > *"Atulya Hospitality works closely with resorts in Jim Corbett and helps travellers choose their stay based on budget, location, safari plans and the type of holiday they are looking for."*
+    > *"Atulya  Hospitality works closely with resorts in Jim Corbett and helps travellers choose their stay based on budget, location, safari plans and the type of holiday they are looking for."*
 
 ### 2. Interactive Star Rating Filter Bar
 - Sourced the live website filter design (`.atl-filter-bar`, `.atl-filter-group`, `.atl-filter-btn`):

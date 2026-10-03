@@ -12,33 +12,7 @@ function ScrollToTop() {
   return null;
 }
 
-// Auto-detect subfolder the app is served from ('' at domain root, '/dist' if uploaded as subfolder, etc.)
-// Works with both absolute ('/assets/...') and relative ('./assets/...') Vite builds.
-// Uses script.src (browser-resolved absolute URL, correct even on deep SPA routes) instead of
-// the raw attribute (which resolves wrongly against the current deep URL).
-let appBase = '';
-try {
-  const scripts = document.querySelectorAll('script[src*="assets/"]');
-  for (const s of scripts) {
-    try {
-      const abs = new URL(s.src, window.location.href);
-      const idx = abs.pathname.indexOf('/assets/');
-      if (idx !== -1) {
-        let prefix = abs.pathname.substring(0, idx).replace(/\/+$/, '');
-        if (prefix === '/') prefix = '';
-        appBase = prefix || '';
-        break;
-      }
-    } catch (e) { /* try next script */ }
-  }
-} catch (e) {
-  appBase = '';
-}
-
-// Fallback for direct visit to /dist before JS bundle name is known (keeps old behaviour)
-if (!appBase && (window.location.pathname === '/dist' || window.location.pathname.startsWith('/dist/'))) {
-  appBase = '/dist';
-}
+const appBase = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // When served from a subfolder, rewrite absolute '/images/...' references so they stay inside the subfolder.
 // (No design/code change - purely a deploy-path fix.)

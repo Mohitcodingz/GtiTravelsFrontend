@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { MapPin, Star, ArrowRight, MessageCircle } from 'lucide-react';
 
 export default function HotelCard({ hotel }) {
+  const heroImage = Array.isArray(hotel.heroImage)
+    ? hotel.heroImage[0]
+    : hotel.heroImage;
+
   const formatPrice = (num) => {
     return '₹' + num.toLocaleString('en-IN');
   };
@@ -32,7 +36,7 @@ export default function HotelCard({ hotel }) {
       >
         <Link to={`/hotel/${hotel.slug}/`}>
           <img
-            src={hotel.heroImage}
+            src={heroImage}
             alt={hotel.title}
             loading="lazy"
             style={{

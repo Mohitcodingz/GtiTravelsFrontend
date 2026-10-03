@@ -12,7 +12,13 @@
     "reviewCount": "1,910 reviews",
     "startingPrice": "₹1",
     "rateNum": 1,
-    "heroImage": "/images/Aahana-3.webp",
+    "heroImage": [
+      "/images/Aahana-3.webp",
+      "/images/Aahana-2.webp",
+      "/images/Aahana-4.webp",
+      "/images/Aahana-5.webp",
+      "/images/Aahana-6.webp"
+    ],
     "gallery": [
       "/images/Aahana-3.webp",
       "/images/Aahana-2.webp",
@@ -145,127 +151,6 @@
     }
   },
   {
-    "slug": "aamaghati-wildlife-resort",
-    "title": "Aamaghati Wildlife Resort10",
-    "destination": "Ranthambore",
-    "destinationSlug": "ranthambore",
-    "rating": "5-star",
-    "starCount": 5,
-    "ratingLabel": "5 Star",
-    "location": "Sherpur Road, Ranthambore",
-    "reviewScore": "4.5",
-    "reviewCount": "708 reviews",
-    "startingPrice": "₹18,719",
-    "rateNum": 18719,
-    "heroImage": "/images/Overview.webp",
-    "gallery": [
-      "/images/Overview.webp",
-      "/images/515A9443.webp",
-      "/images/515A9423.webp",
-      "/images/515A9198.webp",
-      "/images/facade-nighttime-1.webp"
-    ],
-    "overviewHtml": "<p><strong>Aamaghati Wildlife Resort</strong> is distinguished by its beautiful architecture and top-notch service levels. Constructed with the complete theme of Ranthambore, the resort is designed to be in harmony with nature, and hence, the resort feels new and earthy. It’s all designed with a sense of detail and calmness.</p>\n<div class=\"atl-content-block\">\n<div class=\"atl-content-block-text\">\n<p><strong>Note : Please connect with our team to check the latest and discounted prices for the Aamaghati Wildlife Resort @ 9717327225</strong></p>",
-    "overview": "Aamaghati Wildlife Resort is distinguished by its beautiful architecture and top-notch service levels. Constructed with the complete theme of Ranthambore, the resort is designed to be in harmony with nature, and hence, the resort feels new and earthy. It’s all designed with a sense of detail and calmness. Note : Please connect with our team to check the latest and discounted prices for the Aamaghati Wildlife Resort @ 9717327225",
-    "amenities": [
-      "Free Wi-Fi",
-      "Spa",
-      "02 Swimming Pool",
-      "Fine Dining",
-      "Gym",
-      "Ample Parking",
-      "Cocktail Bar",
-      "Concierge"
-    ],
-    "offerText": "Exclusive Offer Love This Stay? Let’s Make It Happen! ❤️ Have questions or want the best deal? Connect with our team GTI Travels Pvt. Ltd. for the latest rates, availability, room options & exclusive offers. We’re just a call or message away @ 9717327225",
-    "rooms": [
-      {
-        "name": "Evoke Room",
-        "rate": 0,
-        "priceStr": "₹0",
-        "image": "/images/515A9320.webp",
-        "description": "Cozy rooms ideal for couples.",
-        "facts": [
-          "2 Guests",
-          "1 Queen / Twin Bed",
-          "250 sq ft"
-        ]
-      },
-      {
-        "name": "Elegant Suite",
-        "rate": 0,
-        "priceStr": "₹0",
-        "image": "/images/Elegant-Room.webp",
-        "description": "Rooms with extra space and comfort.",
-        "facts": [
-          "2 Guests",
-          "1 King Bed",
-          "650 sq ft"
-        ]
-      },
-      {
-        "name": "Legacy Suite",
-        "rate": 0,
-        "priceStr": "₹0",
-        "image": "/images/515A9604.webp",
-        "description": "Suites with some extra space as living area.",
-        "facts": [
-          "2 Guests",
-          "1 King Bed",
-          "950 sq ft"
-        ]
-      },
-      {
-        "name": "Signature Suite",
-        "rate": 0,
-        "priceStr": "₹0",
-        "image": "/images/515A9502.webp",
-        "description": "Luxurious suites with Royal Essence.",
-        "facts": [
-          "2 Guests",
-          "1 King Bed",
-          "2000 sq ft"
-        ]
-      }
-    ],
-    "reviews": [
-      {
-        "author": "Bhanu Pratap",
-        "initials": "BP",
-        "meta": "Jan | India",
-        "stars": 5,
-        "text": "We had a wonderful stay at Aamaghati Wildlife Resort! The location is perfect, just a short drive from the main Ranthambore National Park gates (Zones 1-5), which made our morning safari very convenient. ​The property itself is beautiful and well-maintained, with a lovely 'jungle theme' that feels upscale yet connected to nature. Our room was spacious, spotless, and very comfortable. We especially loved the pool area—it was clean and a great place to relax after a dusty safari. ​A special shout-out to the staff (especially at the restaurant), who were incredibly courteous and attentive to our needs. The food was delicious with a good variety of local Rajasthani and North Indian dishes in the buffet. ​Highly recommend for anyone looking for a comfortable, luxury stay in Ranthambore!\""
-      },
-      {
-        "author": "Anjali Daga",
-        "initials": "AD",
-        "meta": "Jan | India",
-        "stars": 5,
-        "text": "“Exceptional & Amazing stay at Aamaghati Wildlife Resort! Perfect blend of luxury and rustic charm. The staff is incredibly friendly, the property is stunning, and it's the ideal base for exploring Ranthambore National Park. Clean rooms and delicious food. 10/10 would stay again!\" From the moment we arrived, the staff went above and beyond to make us feel at home. The rooms were spotless and spacious, and the food was a highlight—authentic flavors and great variety. They even helped us coordinate our safari logistics seamlessly. A huge thank you to the team for making our Ranthambore trip so special.\""
-      },
-      {
-        "author": "Ekta Agarwal",
-        "initials": "EA",
-        "meta": "May | India",
-        "stars": 5,
-        "text": "Visited Amaghati resort Ranthambhore and I loved the food it was amazing in both taste and quality. The hospitality was also top notch. Chef sashi,yogesh and Shivam made the day even more memorable. And the beauty of the place was a cherry on top."
-      },
-      {
-        "author": "Yashika",
-        "initials": "YA",
-        "meta": "April | India",
-        "stars": 5,
-        "text": "Had a wonderful stay at Aamaghati Resort Ranthambore! The property is beautiful, peaceful, and very well maintained. The rooms were clean and comfortable, making our stay truly relaxing. A special mention to the staff—Yuviii, Mr. & Mrs. Ohii—for their kindness and friendly nature. Their warm hospitality really made our experience even more memorable. Highly recommended for anyone visiting Ranthambore! 🌿✨"
-      }
-    ],
-    "faqs": [],
-    "mealPlanRates": {
-      "CP": 0,
-      "MAP": 18719,
-      "AP": 22229
-    }
-  },
-  {
     "slug": "abn-sarovar-portico",
     "title": "ABN Sarovar Portico, Jim Corbett",
     "destination": "Jim Corbett",
@@ -278,7 +163,13 @@
     "reviewCount": "454 reviews",
     "startingPrice": "₹6,599",
     "rateNum": 6599,
-    "heroImage": "/images/bdd86e32-f7ab-41a1-a97f-889bb2a1b7c3-2.webp",
+    "heroImage": [
+      "/images/bdd86e32-f7ab-41a1-a97f-889bb2a1b7c3-2.webp",
+      "/images/69caaad9-ea10-4d57-8390-e9ec7b57173c-2.webp",
+      "/images/cd7d56c7-284b-4d7d-944e-35d359a8cca7-2.webp",
+      "/images/e3cfe565-c774-4d4b-99e7-15d6bf882654-2.webp",
+      "/images/e3e89ef8-3bd4-4173-b30c-31267ccfb0d7-2.webp"
+    ],
     "gallery": [
       "/images/bdd86e32-f7ab-41a1-a97f-889bb2a1b7c3-2.webp",
       "/images/69caaad9-ea10-4d57-8390-e9ec7b57173c-2.webp",
@@ -435,7 +326,13 @@
     "reviewCount": "1,772 reviews",
     "startingPrice": "₹5,499",
     "rateNum": 5499,
-    "heroImage": "/images/Alaya-2.webp",
+    "heroImage": [
+      "/images/Alaya-2.webp",
+      "/images/Alaya-1.webp",
+      "/images/Alaya-5.webp",
+      "/images/Alaya-4.webp",
+      "/images/Alaya-3.webp"
+    ],
     "gallery": [
       "/images/Alaya-2.webp",
       "/images/Alaya-1.webp",
@@ -592,7 +489,13 @@
     "reviewCount": "2,315 reviews",
     "startingPrice": "₹6,999",
     "rateNum": 6999,
-    "heroImage": "/images/Anantum-2.webp",
+    "heroImage": [
+      "/images/Anantum-2.webp",
+      "/images/pool-2.webp",
+      "/images/Anantum-1.webp",
+      "/images/Bamboo-Cafe-4.webp",
+      "/images/Anantum-6.webp"
+    ],
     "gallery": [
       "/images/Anantum-2.webp",
       "/images/pool-2.webp",
@@ -720,7 +623,13 @@
     "reviewCount": "1,839 reviews",
     "startingPrice": "₹9,499",
     "rateNum": 9499,
-    "heroImage": "/images/ANURAGA004.webp",
+    "heroImage": [
+      "/images/ANURAGA004.webp",
+      "/images/ANURAGA002.webp",
+      "/images/ANURAGA25.webp",
+      "/images/ANURAGA41.webp",
+      "/images/ANURAGA45.webp"
+    ],
     "gallery": [
       "/images/ANURAGA004.webp",
       "/images/ANURAGA002.webp",
@@ -824,7 +733,13 @@
     "reviewCount": "243 reviews",
     "startingPrice": "₹0",
     "rateNum": 0,
-    "heroImage": "/images/home-about-img.webp",
+    "heroImage": [
+      "/images/home-about-img.webp",
+      "/images/tunas-cafe-arif-castles-nainital.webp",
+      "/images/1779195909_premium-open-air-with-view-dining-arif-castles-nainital.webp",
+      "/images/billiards-lounge-arif-castles-nainital.webp",
+      "/images/best-dining-experience-in-nainital-arif-castles.webp"
+    ],
     "gallery": [
       "/images/home-about-img.webp",
       "/images/tunas-cafe-arif-castles-nainital.webp",
@@ -916,7 +831,13 @@
     "reviewCount": "420 reviews",
     "startingPrice": "₹6,999",
     "rateNum": 6999,
-    "heroImage": "/images/Bel-La-2.webp",
+    "heroImage": [
+      "/images/Bel-La-2.webp",
+      "/images/Bel-La-4.webp",
+      "/images/Bel-La-3.webp",
+      "/images/Bel-La-Tigers-Den-Suite.webp",
+      "/images/Bel-La-1.webp"
+    ],
     "gallery": [
       "/images/Bel-La-2.webp",
       "/images/Bel-La-4.webp",
@@ -1044,7 +965,13 @@
     "reviewCount": "3,015 reviews",
     "startingPrice": "₹9,999",
     "rateNum": 9999,
-    "heroImage": "/images/Bellmont-3.webp",
+    "heroImage": [
+      "/images/Bellmont-3.webp",
+      "/images/Bellmont-6.webp",
+      "/images/Bellmont-5.webp",
+      "/images/Bellmont-2.webp",
+      "/images/Bellmont-1.webp"
+    ],
     "gallery": [
       "/images/Bellmont-3.webp",
       "/images/Bellmont-6.webp",
@@ -1148,7 +1075,13 @@
     "reviewCount": "839 reviews",
     "startingPrice": "₹0",
     "rateNum": 0,
-    "heroImage": "/images/Exterior-n4.webp",
+    "heroImage": [
+      "/images/Exterior-n4.webp",
+      "/images/Bonfire-Area.webp",
+      "/images/Restaurant-1.webp",
+      "/images/Lawn.webp",
+      "/images/Corridoor.webp"
+    ],
     "gallery": [
       "/images/Exterior-n4.webp",
       "/images/Bonfire-Area.webp",
@@ -1252,7 +1185,13 @@
     "reviewCount": "2,169 reviews",
     "startingPrice": "₹4,999",
     "rateNum": 4999,
-    "heroImage": "/images/Clarissa-2.webp",
+    "heroImage": [
+      "/images/Clarissa-2.webp",
+      "/images/Clarissa-3.webp",
+      "/images/Clarissa-4.webp",
+      "/images/Clarissa-5.webp",
+      "/images/Clarissa-1.webp"
+    ],
     "gallery": [
       "/images/Clarissa-2.webp",
       "/images/Clarissa-3.webp",
@@ -1397,7 +1336,13 @@
     "reviewCount": "1,213 reviews",
     "startingPrice": "₹8,999",
     "rateNum": 8999,
-    "heroImage": "/images/d57a390e-695f-4078-b686-bdad9a25c799-2.webp",
+    "heroImage": [
+      "/images/d57a390e-695f-4078-b686-bdad9a25c799-2.webp",
+      "/images/galery-images-for-websiteArtboard-22.webp",
+      "/images/ad44cbe9-6030-4434-8ba3-76d135ddac81-2.webp",
+      "/images/ec926ddc-6a04-417c-98b6-ae83d2fc367f-2.webp",
+      "/images/72bc6673-6906-406a-878a-7d9ea42b8258-2.webp"
+    ],
     "gallery": [
       "/images/d57a390e-695f-4078-b686-bdad9a25c799-2.webp",
       "/images/galery-images-for-websiteArtboard-22.webp",
@@ -1554,7 +1499,13 @@
     "reviewCount": "1,835 reviews",
     "startingPrice": "₹5,999",
     "rateNum": 5999,
-    "heroImage": "/images/Savanna-Cottage-07.webp",
+    "heroImage": [
+      "/images/Savanna-Cottage-07.webp",
+      "/images/Savanna-Cottage-12.webp",
+      "/images/Machaan-1.webp",
+      "/images/Machaan-3.webp",
+      "/images/Swimming-Pool-01.webp"
+    ],
     "gallery": [
       "/images/Savanna-Cottage-07.webp",
       "/images/Savanna-Cottage-12.webp",
@@ -1670,7 +1621,13 @@
     "reviewCount": "1,740 reviews",
     "startingPrice": "₹6,999",
     "rateNum": 6999,
-    "heroImage": "/images/CRC-2.webp",
+    "heroImage": [
+      "/images/CRC-2.webp",
+      "/images/CRC-1.webp",
+      "/images/CRC-3.webp",
+      "/images/CRC-4.webp",
+      "/images/CRC-5.webp"
+    ],
     "gallery": [
       "/images/CRC-2.webp",
       "/images/CRC-1.webp",
@@ -1774,10 +1731,10 @@
     "faqs": []
   },
   {
-    "slug": "corbett-view-resort",
-    "title": "Aamaghati Wildlife Resort ",
-    "destination": "Jim Corbett",
-    "destinationSlug": "jim-corbett",
+    "slug": "aamaghati-wildlife-resort",
+    "title": "Aamaghati Wildlife Resort",
+    "destination": "Ranthambore",
+    "destinationSlug": "ranthambore",
     "rating": "3-star",
     "starCount": 3,
     "ratingLabel": "3 Star",
@@ -1786,7 +1743,13 @@
     "reviewCount": "2,090 reviews",
     "startingPrice": "₹3,699",
     "rateNum": 3699,
-    "heroImage": "/images/Untitled5.webp",
+    "heroImage": [
+      "/images/Untitled5.webp",
+      "/images/Untitled1.webp",
+      "/images/Untitled4.webp",
+      "/images/Untitled3.webp",
+      "/images/Untitled.webp"
+    ],
     "gallery": [
       "/images/Untitled5.webp",
       "/images/Untitled1.webp",
@@ -1907,7 +1870,13 @@
     "reviewCount": "1,237 reviews",
     "startingPrice": "₹0",
     "rateNum": 0,
-    "heroImage": "/images/Property_overview_s33add-2.webp",
+    "heroImage": [
+      "/images/Property_overview_s33add-2.webp",
+      "/images/COMMONAREA_pfeo1k-2.webp",
+      "/images/ALFRESCOGURNEYHOUSE_1_xoj7qi-2.webp",
+      "/images/hotel-lobby-2.webp",
+      "/images/Gurney_House-Multi_Cuisine_Restaurant_svit8t-2.webp"
+    ],
     "gallery": [
       "/images/Property_overview_s33add-2.webp",
       "/images/COMMONAREA_pfeo1k-2.webp",
@@ -1999,7 +1968,13 @@
     "reviewCount": "838 reviews",
     "startingPrice": "₹6,999",
     "rateNum": 6999,
-    "heroImage": "/images/6d4d24fd-0ebf-4b95-8eed-e82d5f0a368e-2.webp",
+    "heroImage": [
+      "/images/6d4d24fd-0ebf-4b95-8eed-e82d5f0a368e-2.webp",
+      "/images/31e2622d-06d8-438b-b4cd-244c44d805f5-2.webp",
+      "/images/359b2dbd-8022-4a64-a6d7-9a3181687133-2.webp",
+      "/images/b434fc23-7fbf-4c4f-9de2-ee320f8e7a80-2.webp",
+      "/images/8333e61c-21a3-4537-a36b-200fe14e2dbb-2.webp"
+    ],
     "gallery": [
       "/images/6d4d24fd-0ebf-4b95-8eed-e82d5f0a368e-2.webp",
       "/images/31e2622d-06d8-438b-b4cd-244c44d805f5-2.webp",
@@ -2156,7 +2131,9 @@
     "reviewCount": "207 reviews",
     "startingPrice": "₹0",
     "rateNum": 0,
-    "heroImage": "/images/Golden-Waterhole-Villa.webp",
+    "heroImage": [
+      "/images/Golden-Waterhole-Villa.webp"
+    ],
     "gallery": [],
     "overviewHtml": "",
     "overview": "",
@@ -2235,7 +2212,13 @@
     "reviewCount": "64 reviews",
     "startingPrice": "₹0",
     "rateNum": 0,
-    "heroImage": "/images/facade-one.webp",
+    "heroImage": [
+      "/images/facade-one.webp",
+      "/images/zodiac-sitting.webp",
+      "/images/swimming-pool-new.webp",
+      "/images/hotel-lobby.webp",
+      "/images/hotel-lobby-view.webp"
+    ],
     "gallery": [
       "/images/facade-one.webp",
       "/images/zodiac-sitting.webp",
@@ -2385,7 +2368,13 @@
     "reviewCount": "1,859 reviews",
     "startingPrice": "₹0",
     "rateNum": 0,
-    "heroImage": "/images/1-2.webp",
+    "heroImage": [
+      "/images/1-2.webp",
+      "/images/7.webp",
+      "/images/5.webp",
+      "/images/2.webp",
+      "/images/1.webp"
+    ],
     "gallery": [
       "/images/1-2.webp",
       "/images/7.webp",
@@ -2523,7 +2512,13 @@
     "reviewCount": "1,479 reviews",
     "startingPrice": "₹10,499",
     "rateNum": 10499,
-    "heroImage": "/images/the-hridayesh-wilderness-4.webp",
+    "heroImage": [
+      "/images/the-hridayesh-wilderness-4.webp",
+      "/images/lawn-area-hridayesh.jpeg.webp",
+      "/images/the-hridayesh-wilderness-2.webp",
+      "/images/the-hridayesh-wilderness-5.webp",
+      "/images/WhatsApp-Image-2026-08-02-at-2.51.59-PM.webp"
+    ],
     "gallery": [
       "/images/the-hridayesh-wilderness-4.webp",
       "/images/lawn-area-hridayesh.jpeg.webp",
@@ -2627,7 +2622,13 @@
     "reviewCount": "1,618 reviews",
     "startingPrice": "₹7,999",
     "rateNum": 7999,
-    "heroImage": "/images/Infinity-2.webp",
+    "heroImage": [
+      "/images/Infinity-2.webp",
+      "/images/Infinity-1.webp",
+      "/images/Infinity-3.webp",
+      "/images/Infinity-4.webp",
+      "/images/Infinity-5.webp"
+    ],
     "gallery": [
       "/images/Infinity-2.webp",
       "/images/Infinity-1.webp",
@@ -2731,7 +2732,13 @@
     "reviewCount": "2,400 reviews",
     "startingPrice": "₹12,499",
     "rateNum": 12499,
-    "heroImage": "/images/90c58ab6-b0c7-4c7e-b4dc-889322141d30-2-1.webp",
+    "heroImage": [
+      "/images/90c58ab6-b0c7-4c7e-b4dc-889322141d30-2-1.webp",
+      "/images/9e447a9c-e6c8-46d0-8cd6-628de3c49298-2-1.webp",
+      "/images/984a317f-483e-41ac-b74a-b39a40810026-2-1.webp",
+      "/images/c2b63afb-3b5b-491e-8d7a-edfc095e703c-2-1.webp",
+      "/images/c20bc75f-502e-40b9-9130-9ea72007c965-2-1.webp"
+    ],
     "gallery": [
       "/images/90c58ab6-b0c7-4c7e-b4dc-889322141d30-2-1.webp",
       "/images/9e447a9c-e6c8-46d0-8cd6-628de3c49298-2-1.webp",
@@ -2907,7 +2914,13 @@
     "reviewCount": "2,439 reviews",
     "startingPrice": "₹18,999",
     "rateNum": 18999,
-    "heroImage": "/images/Arial-Picture-6.webp",
+    "heroImage": [
+      "/images/Arial-Picture-6.webp",
+      "/images/Hathi-Kund-2.webp",
+      "/images/Sheesh-Mahal.webp",
+      "/images/Ampitheater.webp",
+      "/images/Arial-Picture-2-1.webp"
+    ],
     "gallery": [
       "/images/Arial-Picture-6.webp",
       "/images/Hathi-Kund-2.webp",
@@ -3011,7 +3024,13 @@
     "reviewCount": "2,842 reviews",
     "startingPrice": "₹0",
     "rateNum": 0,
-    "heroImage": "/images/Facade_er2z38-2.webp",
+    "heroImage": [
+      "/images/Facade_er2z38-2.webp",
+      "/images/An_al_fresco_sitting_at_the_restaurant_during_the_day_decvdy-2.webp",
+      "/images/MG_2562_btukdt-2.webp",
+      "/images/Gurney_House_unzrwd-2.webp",
+      "/images/resort-stella-bar-2.webp"
+    ],
     "gallery": [
       "/images/Facade_er2z38-2.webp",
       "/images/An_al_fresco_sitting_at_the_restaurant_during_the_day_decvdy-2.webp",
@@ -3187,7 +3206,13 @@
     "reviewCount": "1,682 reviews",
     "startingPrice": "₹7,799",
     "rateNum": 7799,
-    "heroImage": "/images/Overview-1.webp",
+    "heroImage": [
+      "/images/Overview-1.webp",
+      "/images/DSC_7668.webp",
+      "/images/DJI_20240402133607_0133_D.webp",
+      "/images/DSC_7765.webp",
+      "/images/1_104_acgokm.webp"
+    ],
     "gallery": [
       "/images/Overview-1.webp",
       "/images/DSC_7668.webp",
@@ -3339,7 +3364,13 @@
     "reviewCount": "1,712 reviews",
     "startingPrice": "₹7,999",
     "rateNum": 7999,
-    "heroImage": "/images/Copy-of-Outdoor1.webp",
+    "heroImage": [
+      "/images/Copy-of-Outdoor1.webp",
+      "/images/1000399900.webp",
+      "/images/Pool-1.webp",
+      "/images/Outdoor5-1.webp",
+      "/images/Rst2.webp"
+    ],
     "gallery": [
       "/images/Copy-of-Outdoor1.webp",
       "/images/1000399900.webp",
@@ -3467,7 +3498,13 @@
     "reviewCount": "805 reviews",
     "startingPrice": "₹8,499",
     "rateNum": 8499,
-    "heroImage": "/images/IMG-20241223-WA0414.webp",
+    "heroImage": [
+      "/images/IMG-20241223-WA0414.webp",
+      "/images/outdoor-rhr-9.webp",
+      "/images/outdoor-rhr-8.webp",
+      "/images/Kosi-suite-19.webp",
+      "/images/Activities-1.webp"
+    ],
     "gallery": [
       "/images/IMG-20241223-WA0414.webp",
       "/images/outdoor-rhr-9.webp",
@@ -3583,7 +3620,13 @@
     "reviewCount": "222 reviews",
     "startingPrice": "₹0",
     "rateNum": 0,
-    "heroImage": "/images/WhatsApp-Image-2025-09-24-at-13.34.02.webp",
+    "heroImage": [
+      "/images/WhatsApp-Image-2025-09-24-at-13.34.02.webp",
+      "/images/WhatsApp-Image-2025-09-24-at-13.33.58.webp",
+      "/images/WhatsApp-Image-2025-09-24-at-13.34.03.webp",
+      "/images/WhatsApp-Image-2025-09-24-at-13.34.02-1.webp",
+      "/images/WhatsApp-Image-2025-09-24-at-13.34.00.webp"
+    ],
     "gallery": [
       "/images/WhatsApp-Image-2025-09-24-at-13.34.02.webp",
       "/images/WhatsApp-Image-2025-09-24-at-13.33.58.webp",
@@ -3709,7 +3752,13 @@
     "reviewCount": "2,078 reviews",
     "startingPrice": "₹0",
     "rateNum": 0,
-    "heroImage": "/images/DSC08846.webp",
+    "heroImage": [
+      "/images/DSC08846.webp",
+      "/images/royal-heritage-new-11.webp",
+      "/images/Royal-Restaurant-3.webp",
+      "/images/royal-heritage-new-16.webp",
+      "/images/royal-heritage-new-4.webp"
+    ],
     "gallery": [
       "/images/DSC08846.webp",
       "/images/royal-heritage-new-11.webp",
@@ -3813,7 +3862,13 @@
     "reviewCount": "955 reviews",
     "startingPrice": "₹4,799",
     "rateNum": 4799,
-    "heroImage": "/images/Serenity-7.webp",
+    "heroImage": [
+      "/images/Serenity-7.webp",
+      "/images/Serenity-1.webp",
+      "/images/Serenity-2.webp",
+      "/images/Serenity-3.webp",
+      "/images/Serenity-4.webp"
+    ],
     "gallery": [
       "/images/Serenity-7.webp",
       "/images/Serenity-1.webp",
@@ -3934,7 +3989,13 @@
     "reviewCount": "7,426 reviews",
     "startingPrice": "₹12,499",
     "rateNum": 12499,
-    "heroImage": "/images/Bonfire-Dining.webp",
+    "heroImage": [
+      "/images/Bonfire-Dining.webp",
+      "/images/Shervani-Hilltop-Header.webp",
+      "/images/IMG_0160-2.webp",
+      "/images/Dining2.webp",
+      "/images/Dining.webp"
+    ],
     "gallery": [
       "/images/Bonfire-Dining.webp",
       "/images/Shervani-Hilltop-Header.webp",
@@ -4062,7 +4123,13 @@
     "reviewCount": "236 reviews",
     "startingPrice": "₹5,499",
     "rateNum": 5499,
-    "heroImage": "/images/Silvanza.webp",
+    "heroImage": [
+      "/images/Silvanza.webp",
+      "/images/DJI_20260406184354_0051_D.webp",
+      "/images/DJI_20260406184128_0044_D.webp",
+      "/images/DSC07579-HDR.webp",
+      "/images/DSC07254-HDR.webp"
+    ],
     "gallery": [
       "/images/Silvanza.webp",
       "/images/DJI_20260406184354_0051_D.webp",
@@ -4215,7 +4282,13 @@
     "reviewCount": "2,999 reviews",
     "startingPrice": "₹10,750",
     "rateNum": 10750,
-    "heroImage": "/images/Tarangi-2.webp",
+    "heroImage": [
+      "/images/Tarangi-2.webp",
+      "/images/Tarangi-5.webp",
+      "/images/Tarangi-1.webp",
+      "/images/Tarangi-3.webp",
+      "/images/Tarangi-Jal-The-Pool-Villa.webp"
+    ],
     "gallery": [
       "/images/Tarangi-2.webp",
       "/images/Tarangi-5.webp",
@@ -4355,7 +4428,9 @@
     "reviewCount": "262 reviews",
     "startingPrice": "₹0",
     "rateNum": 0,
-    "heroImage": "/images/Golden-Waterhole-Villa.webp",
+    "heroImage": [
+      "/images/Golden-Waterhole-Villa.webp"
+    ],
     "gallery": [],
     "overviewHtml": "",
     "overview": "",
@@ -4482,7 +4557,13 @@
     "reviewCount": "488 reviews",
     "startingPrice": "₹5,999",
     "rateNum": 5999,
-    "heroImage": "/images/Facade-1.webp",
+    "heroImage": [
+      "/images/Facade-1.webp",
+      "/images/Bonfire-2.webp",
+      "/images/Restaurant.webp",
+      "/images/Pool-Table.webp",
+      "/images/Open-Seating-Area.webp"
+    ],
     "gallery": [
       "/images/Facade-1.webp",
       "/images/Bonfire-2.webp",
@@ -4586,7 +4667,13 @@
     "reviewCount": "47 reviews",
     "startingPrice": "₹10,999",
     "rateNum": 10999,
-    "heroImage": "/images/new-41-copy_processed_by_imagy.webp",
+    "heroImage": [
+      "/images/new-41-copy_processed_by_imagy.webp",
+      "/images/The-Chamomile-Estate-Restaurant-1_processed_by_imagy.webp",
+      "/images/The-Chamomile-Estate-Bonfire-2_processed_by_imagy.webp",
+      "/images/The-Chamomile-Estate-Creche-1_processed_by_imagy.webp",
+      "/images/The-Chamomile-Estate-Hot-Tub-Jacuzzi_processed_by_imagy.webp"
+    ],
     "gallery": [
       "/images/new-41-copy_processed_by_imagy.webp",
       "/images/The-Chamomile-Estate-Restaurant-1_processed_by_imagy.webp",
@@ -4690,7 +4777,13 @@
     "reviewCount": "2,874 reviews",
     "startingPrice": "₹9,750",
     "rateNum": 9750,
-    "heroImage": "/images/Golden-2.webp",
+    "heroImage": [
+      "/images/Golden-2.webp",
+      "/images/Golden-6.webp",
+      "/images/Golden-5.webp",
+      "/images/Golden-4.webp",
+      "/images/Golden-1.webp"
+    ],
     "gallery": [
       "/images/Golden-2.webp",
       "/images/Golden-6.webp",
@@ -4830,7 +4923,13 @@
     "reviewCount": "624 reviews",
     "startingPrice": "₹3,999",
     "rateNum": 3999,
-    "heroImage": "/images/Jungle-Book-4.webp",
+    "heroImage": [
+      "/images/Jungle-Book-4.webp",
+      "/images/Jungle-Book-1.webp",
+      "/images/Jungle-Book-6.webp",
+      "/images/Jungle-Book-7.webp",
+      "/images/Jungle-Book-2.webp"
+    ],
     "gallery": [
       "/images/Jungle-Book-4.webp",
       "/images/Jungle-Book-1.webp",
@@ -4951,7 +5050,13 @@
     "reviewCount": "2,998 reviews",
     "startingPrice": "₹5,499",
     "rateNum": 5499,
-    "heroImage": "/images/98f6da4f-8f4d-4ece-908c-c7feb7bbf4cc-2.webp",
+    "heroImage": [
+      "/images/98f6da4f-8f4d-4ece-908c-c7feb7bbf4cc-2.webp",
+      "/images/5289a41a-2a75-4d4b-9f6a-b7f17a429d8f-2.webp",
+      "/images/6015d6e4-a913-461f-a97b-620b95cef481-2.webp",
+      "/images/68b9430e-a5c8-469b-b27d-93d1cc860803-2.webp",
+      "/images/ab44a420-851e-46be-9f02-09e641d7bff0-2.webp"
+    ],
     "gallery": [
       "/images/98f6da4f-8f4d-4ece-908c-c7feb7bbf4cc-2.webp",
       "/images/5289a41a-2a75-4d4b-9f6a-b7f17a429d8f-2.webp",
@@ -5084,7 +5189,13 @@
     "reviewCount": "473 reviews",
     "startingPrice": "₹5,499",
     "rateNum": 5499,
-    "heroImage": "/images/River-Edge-3.webp",
+    "heroImage": [
+      "/images/River-Edge-3.webp",
+      "/images/River-Edge-1.webp",
+      "/images/River-Edge-4.webp",
+      "/images/River-Edge-2.webp",
+      "/images/River-Edge-5.webp"
+    ],
     "gallery": [
       "/images/River-Edge-3.webp",
       "/images/River-Edge-1.webp",
@@ -5176,7 +5287,13 @@
     "reviewCount": "1,543 reviews",
     "startingPrice": "₹15,999",
     "rateNum": 15999,
-    "heroImage": "/images/The-Tigress-Ranthambhore-Final-Pix-60.webp",
+    "heroImage": [
+      "/images/The-Tigress-Ranthambhore-Final-Pix-60.webp",
+      "/images/The-Tigress-Ranthambhore-Final-Pix-41.webp",
+      "/images/The-Tigress-Ranthambhore-Final-Pix-40.webp",
+      "/images/Royal-Flavours.webp",
+      "/images/ChatGPT-Image-Aug-12-2026-05_36_53-PM-1.webp"
+    ],
     "gallery": [
       "/images/The-Tigress-Ranthambhore-Final-Pix-60.webp",
       "/images/The-Tigress-Ranthambhore-Final-Pix-41.webp",
@@ -5280,7 +5397,13 @@
     "reviewCount": "2,498 reviews",
     "startingPrice": "₹4,799",
     "rateNum": 4799,
-    "heroImage": "/images/Tiaraa-2.webp",
+    "heroImage": [
+      "/images/Tiaraa-2.webp",
+      "/images/Tiaraa-4.webp",
+      "/images/Tiaraa-3.webp",
+      "/images/Tiaraa-1.webp",
+      "/images/Tiaraa-6.webp"
+    ],
     "gallery": [
       "/images/Tiaraa-2.webp",
       "/images/Tiaraa-4.webp",
@@ -5437,7 +5560,13 @@
     "reviewCount": "1,997 reviews",
     "startingPrice": "₹5,499",
     "rateNum": 5499,
-    "heroImage": "/images/Tiger-3.webp",
+    "heroImage": [
+      "/images/Tiger-3.webp",
+      "/images/Tiger-1.webp",
+      "/images/Tiger-2.webp",
+      "/images/Tiger-5.webp",
+      "/images/Tiger-4.webp"
+    ],
     "gallery": [
       "/images/Tiger-3.webp",
       "/images/Tiger-1.webp",
@@ -5570,7 +5699,13 @@
     "reviewCount": "1,114 reviews",
     "startingPrice": "₹6,499",
     "rateNum": 6499,
-    "heroImage": "/images/Tiger-Den-Resort-Final-Pix-6.webp",
+    "heroImage": [
+      "/images/Tiger-Den-Resort-Final-Pix-6.webp",
+      "/images/Copy-of-Tiger-Den-Resort-Final-Pix-5.webp",
+      "/images/Tiger-Den-Resort-Final-Pix-35.webp",
+      "/images/Copy-of-Tiger-Den-Resort-Final-Pix-12.webp",
+      "/images/Copy-of-Tiger-Den-Resort-Final-Pix-41.webp"
+    ],
     "gallery": [
       "/images/Tiger-Den-Resort-Final-Pix-6.webp",
       "/images/Copy-of-Tiger-Den-Resort-Final-Pix-5.webp",
@@ -5662,7 +5797,13 @@
     "reviewCount": "70 reviews",
     "startingPrice": "₹7,499",
     "rateNum": 7499,
-    "heroImage": "/images/30d35657-2a28-4418-b0dc-71a6352f0aad.webp",
+    "heroImage": [
+      "/images/30d35657-2a28-4418-b0dc-71a6352f0aad.webp",
+      "/images/44d4004f-c715-41ff-8ea8-5cfec7ae6066.webp",
+      "/images/6343b6a3-59c7-49ed-bc5a-37bd94fc98e8.webp",
+      "/images/d40aa6bf-15aa-4f58-aa01-17a501c460e1.webp",
+      "/images/f2b61ab6-2780-47ee-9473-eb8b57cebfdc.webp"
+    ],
     "gallery": [
       "/images/30d35657-2a28-4418-b0dc-71a6352f0aad.webp",
       "/images/44d4004f-c715-41ff-8ea8-5cfec7ae6066.webp",
@@ -5749,7 +5890,13 @@
     "reviewCount": "342 reviews",
     "startingPrice": "₹6,999",
     "rateNum": 6999,
-    "heroImage": "/images/Facade.webp",
+    "heroImage": [
+      "/images/Facade.webp",
+      "/images/Villa-Facade.webp",
+      "/images/Swimming-Pool-Day-View.webp",
+      "/images/Brahmkamal-Restaurant.webp",
+      "/images/Banquet-1.webp"
+    ],
     "gallery": [
       "/images/Facade.webp",
       "/images/Villa-Facade.webp",

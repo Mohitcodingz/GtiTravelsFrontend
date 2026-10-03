@@ -712,9 +712,9 @@ We also help guests understand applicable park rules, regulations, guidelines, a
         {/* 4. The Atulya Advantage (Bespoke Connected 4-Step Journey Rail) */}
         <section className="atl-container" style={{ paddingBottom: '60px' }}>
           <div className="atl-text-center" style={{ marginBottom: '44px' }}>
-            <span className="atl-kicker">✦ The Atulya Difference</span>
+            <span className="atl-kicker">✦ The GTI Difference</span>
             <h2 className="atl-section-title" style={{ margin: '8px 0 12px' }}>
-              Why Discerning Travelers Book With Atulya
+              Why Discerning Travelers Book With GTI TRAVELS PVT. LTD.
             </h2>
             <p style={{ maxWidth: '620px', margin: '0 auto', color: 'var(--atl-ink-700)', fontSize: '15.5px' }}>
               Unlike impersonal booking engines, we combine handpicked resort contracts with on-ground safari naturalists and a direct concierge.
@@ -861,7 +861,7 @@ We also help guests understand applicable park rules, regulations, guidelines, a
                   borderRadius: '9999px',
                   boxShadow: '0 4px 12px rgba(58, 43, 20, 0.35)'
                 }}>
-                  ★ Atulya Signature
+                  ★ GTI TRAVELS PVT. LTD. Signature
                 </div>
                 <div className="atl-experience-icon" style={{ background: 'rgba(58, 43, 20, 0.16)', borderRadius: '16px', width: '52px', height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px', border: '1px solid rgba(58, 43, 20, 0.45)' }}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3a2b14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="atl-shrink-0">

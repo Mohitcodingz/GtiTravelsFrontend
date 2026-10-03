@@ -1,0 +1,4 @@
+.hero-images-report.txt
+=== 
+ M src/data/hotelDetailData.json
+ M src/pages/HotelDetailPage.jsx

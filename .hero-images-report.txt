@@ -1,0 +1,101 @@
+file: src/data/hotelDetailData.json (BOM: false, CRLF: false)
+top-level entries: 47
+public/images: 442, images/: 442, union: 443
+heroImage blocks found in file: 47, planned slots: 47
+ 1. aahana-resort (pool 10)
+    ["/images/Aahana-3.webp","/images/Aahana-2.webp","/images/Aahana-4.webp","/images/Aahana-5.webp","/images/Aahana-6.webp"]
+ 2. aamaghati-wildlife-resort (pool 13)
+    ["/images/AamaghatiWildlifeResort4.jpg","/images/AamaghatiWildlifeResort1.jpg","/images/AamaghatiWildlifeResort2.jpg","/images/AamaghatiWildlifeResort3.jpg","/images/AamaghatiWildlifeResort5.jpg"]
+ 3. abn-sarovar-portico (pool 5)
+    ["/images/bdd86e32-f7ab-41a1-a97f-889bb2a1b7c3-2.webp","/images/69caaad9-ea10-4d57-8390-e9ec7b57173c-2.webp","/images/cd7d56c7-284b-4d7d-944e-35d359a8cca7-2.webp","/images/e3cfe565-c774-4d4b-99e7-15d6bf882654-2.webp","/images/e3e89ef8-3bd4-4173-b30c-31267ccfb0d7-2.webp"]
+ 4. alaya-resort-corbett (pool 8)
+    ["/images/Alaya-2.webp","/images/Alaya-1.webp","/images/Alaya-3.webp","/images/Alaya-4.webp","/images/Alaya-5.webp"]
+ 5. anantum-gateway-resorts (pool 9)
+    ["/images/Anantum-2.webp","/images/Anantum-1.webp","/images/Anantum-02-Bedroom-Family-Suite.webp","/images/Anantum-6.webp","/images/pool-2.webp"]
+ 6. anuraga-palace-ranthambore (pool 6)
+    ["/images/ANURAGA004.webp","/images/ANURAGA002.webp","/images/ANURAGA8.webp","/images/ANURAGA25.webp","/images/ANURAGA41.webp"]
+ 7. arif-castle-nainital (pool 6)
+    ["/images/home-about-img.webp","/images/tunas-cafe-arif-castles-nainital.webp","/images/1779195909_premium-open-air-with-view-dining-arif-castles-nainital.webp","/images/billiards-lounge-arif-castles-nainital.webp","/images/best-dining-experience-in-nainital-arif-castles.webp"]
+ 8. bel-la-monde-corbett (pool 9)
+    ["/images/Bel-La-2.webp","/images/Bel-La-1.webp","/images/Bel-La-3.webp","/images/Bel-La-4.webp","/images/Bel-La-Tigers-Den-Suite.webp"]
+ 9. bellmont-caves-resort (pool 8)
+    ["/images/Bellmont-3.webp","/images/Bellmont-1.webp","/images/Bellmont-2.webp","/images/Bellmont-5.webp","/images/Bellmont-6.webp"]
+10. chevron-fairhavens (pool 5)
+    ["/images/Exterior-n4.webp","/images/Bonfire-Area.webp","/images/Restaurant-1.webp","/images/Lawn.webp","/images/Corridoor.webp"]
+11. clarissa-resort (pool 9)
+    ["/images/Clarissa-2.webp","/images/Clarissa-1.webp","/images/Clarissa-3.webp","/images/Clarissa-4.webp","/images/Clarissa-5.webp"]
+12. corbett-elegant-retreat (pool 6)
+    ["/images/d57a390e-695f-4078-b686-bdad9a25c799-2.webp","/images/galery-images-for-websiteArtboard-22.webp","/images/ad44cbe9-6030-4434-8ba3-76d135ddac81-2.webp","/images/ec926ddc-6a04-417c-98b6-ae83d2fc367f-2.webp","/images/72bc6673-6906-406a-878a-7d9ea42b8258-2.webp"]
+13. corbett-machaan-resort (pool 8)
+    ["/images/Savanna-Cottage-07.webp","/images/Savanna-Cottage-12.webp","/images/Machaan-1.webp","/images/Machaan-3.webp","/images/Swimming-Pool-01.webp"]
+14. corbett-river-creek (pool 5)
+    ["/images/CRC-2.webp","/images/CRC-1.webp","/images/CRC-3.webp","/images/CRC-4.webp","/images/CRC-5.webp"]
+15. corbett-view-resort (pool 8)
+    ["/images/AamaghatiWildlifeResort1.jpg","/images/AamaghatiWildlifeResort2.jpg","/images/AamaghatiWildlifeResort3.jpg","/images/AamaghatiWildlifeResort4.jpg","/images/AamaghatiWildlifeResort5.jpg"]
+16. earls-court-nainital (pool 5)
+    ["/images/Property_overview_s33add-2.webp","/images/COMMONAREA_pfeo1k-2.webp","/images/ALFRESCOGURNEYHOUSE_1_xoj7qi-2.webp","/images/hotel-lobby-2.webp","/images/Gurney_House-Multi_Cuisine_Restaurant_svit8t-2.webp"]
+17. evara-spa-resort (pool 5)
+    ["/images/6d4d24fd-0ebf-4b95-8eed-e82d5f0a368e-2.webp","/images/31e2622d-06d8-438b-b4cd-244c44d805f5-2.webp","/images/359b2dbd-8022-4a64-a6d7-9a3181687133-2.webp","/images/b434fc23-7fbf-4c4f-9de2-ee320f8e7a80-2.webp","/images/8333e61c-21a3-4537-a36b-200fe14e2dbb-2.webp"]
+18. fishermen-lodge (pool 1)
+    ["/images/Golden-Waterhole-Villa.webp","/images/Golden-Waterhole-Villa.webp","/images/Golden-Waterhole-Villa.webp","/images/Golden-Waterhole-Villa.webp","/images/Golden-Waterhole-Villa.webp"]
+19. fortune-lakeview-bhimtal (pool 8)
+    ["/images/facade-one.webp","/images/zodiac-sitting.webp","/images/swimming-pool-new.webp","/images/hotel-lobby.webp","/images/hotel-lobby-view.webp"]
+20. hotel-harshikhar-bhimtal (pool 5)
+    ["/images/1-2.webp","/images/7.webp","/images/5.webp","/images/2.webp","/images/1.webp"]
+21. hridayesh-resort (pool 8)
+    ["/images/the-hridayesh-wilderness-4.webp","/images/the-hridayesh-wilderness-2.webp","/images/the-hridayesh-wilderness-5.webp","/images/lawn-area-hridayesh.jpeg.webp","/images/WhatsApp-Image-2026-08-02-at-2.51.59-PM.webp"]
+22. infinity-resort-corbett (pool 7)
+    ["/images/Infinity-2.webp","/images/Infinity-1.webp","/images/Infinity-3.webp","/images/Infinity-4.webp","/images/Infinity-5.webp"]
+23. manu-maharani-resort (pool 7)
+    ["/images/90c58ab6-b0c7-4c7e-b4dc-889322141d30-2-1.webp","/images/9e447a9c-e6c8-46d0-8cd6-628de3c49298-2-1.webp","/images/984a317f-483e-41ac-b74a-b39a40810026-2-1.webp","/images/c2b63afb-3b5b-491e-8d7a-edfc095e703c-2-1.webp","/images/c20bc75f-502e-40b9-9130-9ea72007c965-2-1.webp"]
+24. nahargarh-ranthambore (pool 5)
+    ["/images/Arial-Picture-6.webp","/images/Arial-Picture-2-1.webp","/images/Hathi-Kund-2.webp","/images/Sheesh-Mahal.webp","/images/Ampitheater.webp"]
+25. naini-retreat (pool 5)
+    ["/images/Facade_er2z38-2.webp","/images/An_al_fresco_sitting_at_the_restaurant_during_the_day_decvdy-2.webp","/images/MG_2562_btukdt-2.webp","/images/Gurney_House_unzrwd-2.webp","/images/resort-stella-bar-2.webp"]
+26. ojaswi-himalayan-resort (pool 6)
+    ["/images/Overview-1.webp","/images/DSC_7668.webp","/images/DJI_20240402133607_0133_D.webp","/images/DSC_7765.webp","/images/1_104_acgokm.webp"]
+27. puratan-qila (pool 5)
+    ["/images/Copy-of-Outdoor1.webp","/images/1000399900.webp","/images/Pool-1.webp","/images/Outdoor5-1.webp","/images/Rst2.webp"]
+28. river-heritage-resort (pool 8)
+    ["/images/IMG-20241223-WA0414.webp","/images/outdoor-rhr-9.webp","/images/outdoor-rhr-8.webp","/images/Kosi-suite-19.webp","/images/Activities-1.webp"]
+29. rosewood-retreat-bhimtal (pool 5)
+    ["/images/WhatsApp-Image-2025-09-24-at-13.34.02.webp","/images/WhatsApp-Image-2025-09-24-at-13.34.00.webp","/images/WhatsApp-Image-2025-09-24-at-13.34.02-1.webp","/images/WhatsApp-Image-2025-09-24-at-13.34.03.webp","/images/WhatsApp-Image-2025-09-24-at-13.33.58.webp"]
+30. royal-heritage-nainital (pool 5)
+    ["/images/DSC08846.webp","/images/royal-heritage-new-11.webp","/images/Royal-Restaurant-3.webp","/images/royal-heritage-new-16.webp","/images/royal-heritage-new-4.webp"]
+31. serenity-corbett-resort (pool 7)
+    ["/images/Serenity-7.webp","/images/Serenity-1.webp","/images/Serenity-2.webp","/images/Serenity-3.webp","/images/Serenity-4.webp"]
+32. shervani-hilltop-nainital (pool 12)
+    ["/images/Bonfire-Dining.webp","/images/Shervani-Hilltop-Header.webp","/images/IMG_0160-2.webp","/images/Dining2.webp","/images/Dining.webp"]
+33. silvanza-resort-by-nivanta (pool 5)
+    ["/images/Silvanza.webp","/images/DJI_20260406184354_0051_D.webp","/images/DJI_20260406184128_0044_D.webp","/images/DSC07579-HDR.webp","/images/DSC07254-HDR.webp"]
+34. tarangi-resort-corbett (pool 10)
+    ["/images/Tarangi-2.webp","/images/Tarangi-1.webp","/images/Tarangi-3.webp","/images/Tarangi-5.webp","/images/Tarangi-Jal-The-Pool-Villa.webp"]
+35. terra-bliss-lake-resort-and-spa (pool 1)
+    ["/images/Golden-Waterhole-Villa.webp","/images/Golden-Waterhole-Villa.webp","/images/Golden-Waterhole-Villa.webp","/images/Golden-Waterhole-Villa.webp","/images/Golden-Waterhole-Villa.webp"]
+36. the-cedar-castle (pool 9)
+    ["/images/Facade-1.webp","/images/Bonfire-2.webp","/images/Restaurant.webp","/images/Pool-Table.webp","/images/Open-Seating-Area.webp"]
+37. the-chamomile-estate (pool 8)
+    ["/images/new-41-copy_processed_by_imagy.webp","/images/The-Chamomile-Estate-Restaurant-1_processed_by_imagy.webp","/images/The-Chamomile-Estate-Bonfire-2_processed_by_imagy.webp","/images/The-Chamomile-Estate-Creche-1_processed_by_imagy.webp","/images/The-Chamomile-Estate-Hot-Tub-Jacuzzi_processed_by_imagy.webp"]
+38. the-golden-tusk-resort (pool 11)
+    ["/images/Golden-2.webp","/images/Golden-1.webp","/images/Golden-4.webp","/images/Golden-5.webp","/images/Golden-6.webp"]
+39. the-jungle-book-corbett (pool 7)
+    ["/images/Jungle-Book-4.webp","/images/Jungle-Book-1.webp","/images/Jungle-Book-2.webp","/images/Jungle-Book-6.webp","/images/Jungle-Book-7.webp"]
+40. the-maasai-mara (pool 5)
+    ["/images/98f6da4f-8f4d-4ece-908c-c7feb7bbf4cc-2.webp","/images/5289a41a-2a75-4d4b-9f6a-b7f17a429d8f-2.webp","/images/6015d6e4-a913-461f-a97b-620b95cef481-2.webp","/images/68b9430e-a5c8-469b-b27d-93d1cc860803-2.webp","/images/ab44a420-851e-46be-9f02-09e641d7bff0-2.webp"]
+41. the-river-edge-corbett (pool 7)
+    ["/images/River-Edge-3.webp","/images/River-Edge-1.webp","/images/River-Edge-2.webp","/images/River-Edge-4.webp","/images/River-Edge-5.webp"]
+42. the-tigress-ranthambore (pool 8)
+    ["/images/The-Tigress-Ranthambhore-Final-Pix-60.webp","/images/The-Tigress-Ranthambhore-Final-Pix-3.webp","/images/The-Tigress-Ranthambhore-Final-Pix-18.webp","/images/The-Tigress-Ranthambhore-Final-Pix-40.webp","/images/The-Tigress-Ranthambhore-Final-Pix-41.webp"]
+43. tiaraa-corbett (pool 8)
+    ["/images/Tiaraa-2.webp","/images/Tiaraa-1.webp","/images/Tiaraa-3.webp","/images/Tiaraa-4.webp","/images/Tiaraa-6.webp"]
+44. tiger-camp-resort (pool 12)
+    ["/images/Tiger-3.webp","/images/Tiger-1.webp","/images/Tiger-2.webp","/images/Tiger-4.webp","/images/Tiger-5.webp"]
+45. tiger-den-resort-ranthambore (pool 5)
+    ["/images/Tiger-Den-Resort-Final-Pix-6.webp","/images/Tiger-Den-Resort-Final-Pix-35.webp","/images/Copy-of-Tiger-Den-Resort-Final-Pix-5.webp","/images/Copy-of-Tiger-Den-Resort-Final-Pix-12.webp","/images/Copy-of-Tiger-Den-Resort-Final-Pix-41.webp"]
+46. twamev-corbett (pool 5)
+    ["/images/30d35657-2a28-4418-b0dc-71a6352f0aad.webp","/images/44d4004f-c715-41ff-8ea8-5cfec7ae6066.webp","/images/6343b6a3-59c7-49ed-bc5a-37bd94fc98e8.webp","/images/d40aa6bf-15aa-4f58-aa01-17a501c460e1.webp","/images/f2b61ab6-2780-47ee-9473-eb8b57cebfdc.webp"]
+47. vandhara-sarovar-premiere (pool 9)
+    ["/images/Facade.webp","/images/Facade-1.webp","/images/Villa-Facade.webp","/images/Swimming-Pool-Day-View.webp","/images/Brahmkamal-Restaurant.webp"]
+VALIDATION PASS: 47/47 hotels now have heroImage arrays (each >= 5 entries, first element preserved).
+total image paths written: 235; found on disk: 235; missing everywhere: 0; root-images-only refs: 0
+RESULT: written to src/data/hotelDetailData.json

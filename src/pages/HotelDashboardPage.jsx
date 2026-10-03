@@ -104,9 +104,10 @@ export default function HotelDashboardPage() {
     <main>
       <h1>Hotel detail data</h1>
       <p>
-        Select a property and edit its detail-page content and meal-plan rates.
-        Changes are saved in <code>src/data/hotelDetailData.json</code>, separate
-        from the hotel listing data.
+        Select a property and edit all of its detail-page data. Every hotel&apos;s
+        complete detail-page record is stored in{' '}
+        <code>src/data/hotelDetailData.json</code>. Hotel listing data remains
+        separate.
       </p>
 
       <label htmlFor="hotel-select">Hotel</label>{' '}
@@ -177,8 +178,8 @@ export default function HotelDashboardPage() {
       <p role="status">{status}</p>
       <p>
         Run <code>npm run dev</code> and open <code>http://localhost:3000/admin/</code>.
-        Edit the same per-hotel values in <code>src/data/hotelDetailData.json</code>
-        or use this dashboard. Rebuild and redeploy to publish changes.
+        You can edit the selected complete record in this dashboard or directly
+        edit its slug entry in <code>src/data/hotelDetailData.json</code>.
       </p>
     </main>
   );
